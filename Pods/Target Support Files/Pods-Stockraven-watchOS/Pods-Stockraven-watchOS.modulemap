@@ -1,0 +1,6 @@
+framework module Pods_Stockraven_watchOS {
+  umbrella header "Pods-Stockraven-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

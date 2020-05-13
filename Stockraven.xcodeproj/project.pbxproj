@@ -3,23 +3,654 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		11832B3168BAFA3CA745672C /* Pods_Stockraven_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BB29844D2E5E5A97E42E8B /* Pods_Stockraven_macOS.framework */; };
+		15F0A78FE4115CA99A35CDB2 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C89AC15B6E4ED41286F7456 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework */; };
+		2B4D53FFFBB1E48FD4D8E055 /* Pods_Stockraven_watchOS_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AEECC94219F0EE6C4FFC11 /* Pods_Stockraven_watchOS_WatchKit_App.framework */; };
+		73CBB5AB380E509B83BF8FE8 /* Pods_Stockraven_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA05D8C46AEF4576E3466C /* Pods_Stockraven_iOS.framework */; };
+		B00B358B246C65A400FBB111 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358A246C65A400FBB111 /* BinarySearch.swift */; };
+		B01078AF24605EBE007F8BA3 /* BidAskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078AE24605EBE007F8BA3 /* BidAskView.swift */; };
+		B01078B2246071C0007F8BA3 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */; };
+		B01078BC2460E9BF007F8BA3 /* ResetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B42460E9BD007F8BA3 /* ResetCell.swift */; };
+		B01078BD2460E9BF007F8BA3 /* AlertSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B52460E9BD007F8BA3 /* AlertSwitchCell.swift */; };
+		B01078BE2460E9BF007F8BA3 /* ResetSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B62460E9BD007F8BA3 /* ResetSelectViewController.swift */; };
+		B01078BF2460E9BF007F8BA3 /* DeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B72460E9BE007F8BA3 /* DeleteCell.swift */; };
+		B01078C02460E9BF007F8BA3 /* AlertTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B82460E9BE007F8BA3 /* AlertTextFieldCell.swift */; };
+		B01078C12460E9BF007F8BA3 /* SendNotificationTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B92460E9BE007F8BA3 /* SendNotificationTypeCell.swift */; };
+		B01078C22460E9BF007F8BA3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078BA2460E9BF007F8BA3 /* AlertViewController.swift */; };
+		B01078C32460E9BF007F8BA3 /* SegmentedControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078BB2460E9BF007F8BA3 /* SegmentedControlCell.swift */; };
+		B015F0DE245E1F6500E8B8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F0DD245E1F6500E8B8B7 /* AppDelegate.swift */; };
+		B015F0E0245E1F6500E8B8B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F0DF245E1F6500E8B8B7 /* SceneDelegate.swift */; };
+		B015F0E5245E1F6500E8B8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B015F0E3245E1F6500E8B8B7 /* Main.storyboard */; };
+		B015F0E7245E1F6600E8B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B015F0E6245E1F6600E8B8B7 /* Assets.xcassets */; };
+		B015F0EA245E1F6600E8B8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B015F0E8245E1F6600E8B8B7 /* LaunchScreen.storyboard */; };
+		B015F0F6245E1F7E00E8B8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F0F5245E1F7E00E8B8B7 /* AppDelegate.swift */; };
+		B015F0F8245E1F7E00E8B8B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F0F7245E1F7E00E8B8B7 /* ViewController.swift */; };
+		B015F0FA245E1F7F00E8B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B015F0F9245E1F7F00E8B8B7 /* Assets.xcassets */; };
+		B015F0FD245E1F7F00E8B8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B015F0FB245E1F7F00E8B8B7 /* Main.storyboard */; };
+		B015F109245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B015F108245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B015F10F245E1F9C00E8B8B7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B015F10D245E1F9C00E8B8B7 /* Interface.storyboard */; };
+		B015F111245E1F9D00E8B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B015F110245E1F9D00E8B8B7 /* Assets.xcassets */; };
+		B015F118245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B015F117245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B015F11D245E1F9D00E8B8B7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F11C245E1F9D00E8B8B7 /* InterfaceController.swift */; };
+		B015F11F245E1F9D00E8B8B7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F11E245E1F9D00E8B8B7 /* ExtensionDelegate.swift */; };
+		B015F121245E1F9D00E8B8B7 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F120245E1F9D00E8B8B7 /* NotificationController.swift */; };
+		B015F123245E1F9D00E8B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B015F122245E1F9D00E8B8B7 /* Assets.xcassets */; };
+		B015F132245E229300E8B8B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B015F131245E229300E8B8B7 /* GoogleService-Info.plist */; };
+		B015F137245E250400E8B8B7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F136245E250400E8B8B7 /* SignInViewController.swift */; };
+		B015F13A245E251F00E8B8B7 /* Easings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F139245E251F00E8B8B7 /* Easings.swift */; };
+		B015F13C245E252F00E8B8B7 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F13B245E252F00E8B8B7 /* UIColor+Extensions.swift */; };
+		B015F13E245E253C00E8B8B7 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F13D245E253C00E8B8B7 /* UIFont+Extensions.swift */; };
+		B015F140245E255100E8B8B7 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F13F245E255100E8B8B7 /* UIView+Extensions.swift */; };
+		B015F142245E259300E8B8B7 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F141245E259300E8B8B7 /* Date+Extensions.swift */; };
+		B015F144245E259B00E8B8B7 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F143245E259B00E8B8B7 /* Double+Extensions.swift */; };
+		B015F146245E25A300E8B8B7 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F145245E25A300E8B8B7 /* Notification+Extensions.swift */; };
+		B015F148245E25F500E8B8B7 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F147245E25F500E8B8B7 /* RootTabBarController.swift */; };
+		B015F14B245E272800E8B8B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F14A245E272800E8B8B7 /* HomeViewController.swift */; };
+		B04B6DE1245E35CB0011238F /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B6DE0245E35CB0011238F /* StockManager.swift */; };
+		B05511DE2461B41D006A52FD /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511DD2461B41D006A52FD /* AlertNotification.swift */; };
+		B05511E02461B4AE006A52FD /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511DF2461B4AE006A52FD /* NotificationManager.swift */; };
+		B05511E32461B762006A52FD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511E22461B762006A52FD /* NotificationsViewController.swift */; };
+		B05D2849246ACA9E0097B49A /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05D2848246ACA9E0097B49A /* StockCell.swift */; };
+		B05D284B246B28960097B49A /* StockFundamentalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05D284A246B28960097B49A /* StockFundamentalsCell.swift */; };
+		B06A84D32462DCF1009C32EC /* StockDetailTabHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A84D22462DCF1009C32EC /* StockDetailTabHeader.swift */; };
+		B06A84D52462EFC3009C32EC /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A84D42462EFC3009C32EC /* AlertCell.swift */; };
+		B06A84D724637DA7009C32EC /* StockDetailViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A84D624637DA7009C32EC /* StockDetailViewController+Extensions.swift */; };
+		B07B3D36245E63E500BEB314 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D35245E63E500BEB314 /* Alert.swift */; };
+		B07B3D38245E650800BEB314 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D37245E650800BEB314 /* Stock.swift */; };
+		B07B3D3A245E654700BEB314 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D39245E654700BEB314 /* ThemeManager.swift */; };
+		B07B3D3C245E656300BEB314 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07B3D3B245E656300BEB314 /* Colors.xcassets */; };
+		B07B3D3E245E658B00BEB314 /* RavenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D3D245E658B00BEB314 /* RavenAPI.swift */; };
+		B07B3D41245E67AD00BEB314 /* TickerSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D40245E67AD00BEB314 /* TickerSearchResultsController.swift */; };
+		B07B3D46245E6AB700BEB314 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B3D45245E6AB700BEB314 /* NetworkExtension.framework */; };
+		B07EA5CA246479FD006A491E /* StockCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5C9246479FD006A491E /* StockCellNode.swift */; };
+		B07EA5CC24647C70006A491E /* BidAskNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CB24647C70006A491E /* BidAskNode.swift */; };
+		B07EA5CE2464AABA006A491E /* StockDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */; };
+		B07EA5D02465D724006A491E /* LiveChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CF2465D724006A491E /* LiveChartView.swift */; };
+		B09B993C24647791002EC1F7 /* TextureHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B993B24647791002EC1F7 /* TextureHomeViewController.swift */; };
+		B0B9AFE1245F844600D17D9C /* Home+CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9AFE0245F844600D17D9C /* Home+CollectionViewExtension.swift */; };
+		B0D89FF82461E313008145F1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FF72461E313008145F1 /* UserViewController.swift */; };
+		B0D89FFB24620D9A008145F1 /* TwitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FFA24620D9A008145F1 /* TwitterCell.swift */; };
+		B0D89FFD24621810008145F1 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FFC24621810008145F1 /* Tweet.swift */; };
+		B0D89FFF246220BF008145F1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FFE246220BF008145F1 /* UIImageView+Extensions.swift */; };
+		B0D8A00124622482008145F1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D8A00024622482008145F1 /* News.swift */; };
+		B0D8A003246225C0008145F1 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D8A002246225C0008145F1 /* NewsCell.swift */; };
+		DAD59BCED675BE30B44A4B05 /* Pods_Stockraven_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B43DF20EE8A1AB7090B54 /* Pods_Stockraven_watchOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B015F10A245E1F9C00E8B8B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B015F0D0245E1F4700E8B8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B015F107245E1F9C00E8B8B7;
+			remoteInfo = "Stockraven-watchOS WatchKit App";
+		};
+		B015F119245E1F9D00E8B8B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B015F0D0245E1F4700E8B8B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B015F116245E1F9D00E8B8B7;
+			remoteInfo = "Stockraven-watchOS WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B015F129245E1F9D00E8B8B7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B015F118245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F12D245E1F9D00E8B8B7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B015F109245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0CE4B3699E938C685A502AC2 /* Pods-Stockraven-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		35CA05D8C46AEF4576E3466C /* Pods_Stockraven_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		551B43DF20EE8A1AB7090B54 /* Pods_Stockraven_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7713CC1DB760403DB424B758 /* Pods-Stockraven-watchOS WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit Extension/Pods-Stockraven-watchOS WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		8A19B94E4313725EBEE4058F /* Pods-Stockraven-watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS/Pods-Stockraven-watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8C89AC15B6E4ED41286F7456 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_watchOS_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3AF268972DEF1E27FB73BE /* Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit Extension/Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9245530C5F9C2C4C18489157 /* Pods-Stockraven-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-macOS.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-macOS/Pods-Stockraven-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A89604354857857E3F031B07 /* Pods-Stockraven-watchOS WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit App/Pods-Stockraven-watchOS WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		B00B358A246C65A400FBB111 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		B01078AE24605EBE007F8BA3 /* BidAskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidAskView.swift; sourceTree = "<group>"; };
+		B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		B01078B42460E9BD007F8BA3 /* ResetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetCell.swift; sourceTree = "<group>"; };
+		B01078B52460E9BD007F8BA3 /* AlertSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSwitchCell.swift; sourceTree = "<group>"; };
+		B01078B62460E9BD007F8BA3 /* ResetSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetSelectViewController.swift; sourceTree = "<group>"; };
+		B01078B72460E9BE007F8BA3 /* DeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteCell.swift; sourceTree = "<group>"; };
+		B01078B82460E9BE007F8BA3 /* AlertTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTextFieldCell.swift; sourceTree = "<group>"; };
+		B01078B92460E9BE007F8BA3 /* SendNotificationTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNotificationTypeCell.swift; sourceTree = "<group>"; };
+		B01078BA2460E9BF007F8BA3 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		B01078BB2460E9BF007F8BA3 /* SegmentedControlCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlCell.swift; sourceTree = "<group>"; };
+		B015F0DA245E1F6500E8B8B7 /* Stockraven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockraven.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015F0DD245E1F6500E8B8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B015F0DF245E1F6500E8B8B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B015F0E4245E1F6500E8B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B015F0E6245E1F6600E8B8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B015F0E9245E1F6600E8B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B015F0EB245E1F6600E8B8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B015F0F3245E1F7E00E8B8B7 /* Stockraven-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stockraven-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015F0F5245E1F7E00E8B8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B015F0F7245E1F7E00E8B8B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B015F0F9245E1F7F00E8B8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B015F0FC245E1F7F00E8B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B015F0FE245E1F7F00E8B8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B015F0FF245E1F7F00E8B8B7 /* Stockraven_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stockraven_macOS.entitlements; sourceTree = "<group>"; };
+		B015F105245E1F9C00E8B8B7 /* Stockraven-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stockraven-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015F108245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stockraven-watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015F10E245E1F9C00E8B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B015F110245E1F9D00E8B8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B015F112245E1F9D00E8B8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B015F117245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Stockraven-watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B015F11C245E1F9D00E8B8B7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B015F11E245E1F9D00E8B8B7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B015F120245E1F9D00E8B8B7 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B015F122245E1F9D00E8B8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B015F124245E1F9D00E8B8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B015F125245E1F9D00E8B8B7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B015F131245E229300E8B8B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B015F136245E250400E8B8B7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		B015F139245E251F00E8B8B7 /* Easings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easings.swift; sourceTree = "<group>"; };
+		B015F13B245E252F00E8B8B7 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B015F13D245E253C00E8B8B7 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		B015F13F245E255100E8B8B7 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		B015F141245E259300E8B8B7 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		B015F143245E259B00E8B8B7 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		B015F145245E25A300E8B8B7 /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		B015F147245E25F500E8B8B7 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		B015F14A245E272800E8B8B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B04B6DE0245E35CB0011238F /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		B05511DD2461B41D006A52FD /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
+		B05511DF2461B4AE006A52FD /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		B05511E22461B762006A52FD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		B05D2848246ACA9E0097B49A /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
+		B05D284A246B28960097B49A /* StockFundamentalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFundamentalsCell.swift; sourceTree = "<group>"; };
+		B06A84D22462DCF1009C32EC /* StockDetailTabHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailTabHeader.swift; sourceTree = "<group>"; };
+		B06A84D42462EFC3009C32EC /* AlertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
+		B06A84D624637DA7009C32EC /* StockDetailViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockDetailViewController+Extensions.swift"; sourceTree = "<group>"; };
+		B07B3D35245E63E500BEB314 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		B07B3D37245E650800BEB314 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		B07B3D39245E654700BEB314 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		B07B3D3B245E656300BEB314 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B07B3D3D245E658B00BEB314 /* RavenAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavenAPI.swift; sourceTree = "<group>"; };
+		B07B3D40245E67AD00BEB314 /* TickerSearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSearchResultsController.swift; sourceTree = "<group>"; };
+		B07B3D44245E6AB600BEB314 /* Stockraven-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stockraven-iOS.entitlements"; sourceTree = "<group>"; };
+		B07B3D45245E6AB700BEB314 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
+		B07EA5C9246479FD006A491E /* StockCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCellNode.swift; sourceTree = "<group>"; };
+		B07EA5CB24647C70006A491E /* BidAskNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidAskNode.swift; sourceTree = "<group>"; };
+		B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailPageViewController.swift; sourceTree = "<group>"; };
+		B07EA5CF2465D724006A491E /* LiveChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChartView.swift; sourceTree = "<group>"; };
+		B09B993B24647791002EC1F7 /* TextureHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureHomeViewController.swift; sourceTree = "<group>"; };
+		B0B9AFE0245F844600D17D9C /* Home+CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CollectionViewExtension.swift"; sourceTree = "<group>"; };
+		B0D89FF72461E313008145F1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		B0D89FFA24620D9A008145F1 /* TwitterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCell.swift; sourceTree = "<group>"; };
+		B0D89FFC24621810008145F1 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		B0D89FFE246220BF008145F1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B0D8A00024622482008145F1 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		B0D8A002246225C0008145F1 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		C9098FED67C41D3127DB1EA1 /* Pods-Stockraven-watchOS WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit App/Pods-Stockraven-watchOS WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		CF6472224098200F88F1C47B /* Pods-Stockraven-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS/Pods-Stockraven-watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		D6BB29844D2E5E5A97E42E8B /* Pods_Stockraven_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFCA88E2D4A1A8D68A879818 /* Pods-Stockraven-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-iOS.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		E3AEECC94219F0EE6C4FFC11 /* Pods_Stockraven_watchOS_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_watchOS_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7AEB81850A443AD5E052840 /* Pods-Stockraven-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-macOS.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-macOS/Pods-Stockraven-macOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68687F26AB4AD7048B283A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4D53FFFBB1E48FD4D8E055 /* Pods_Stockraven_watchOS_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BA689078556FE0D67F403AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAD59BCED675BE30B44A4B05 /* Pods_Stockraven_watchOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F0D7245E1F6500E8B8B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73CBB5AB380E509B83BF8FE8 /* Pods_Stockraven_iOS.framework in Frameworks */,
+				B07B3D46245E6AB700BEB314 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F0F0245E1F7E00E8B8B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11832B3168BAFA3CA745672C /* Pods_Stockraven_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F114245E1F9D00E8B8B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F0A78FE4115CA99A35CDB2 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		ACE69BFB5F865DB73C05C731 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CE4B3699E938C685A502AC2 /* Pods-Stockraven-iOS.debug.xcconfig */,
+				DFCA88E2D4A1A8D68A879818 /* Pods-Stockraven-iOS.release.xcconfig */,
+				9245530C5F9C2C4C18489157 /* Pods-Stockraven-macOS.debug.xcconfig */,
+				E7AEB81850A443AD5E052840 /* Pods-Stockraven-macOS.release.xcconfig */,
+				8A19B94E4313725EBEE4058F /* Pods-Stockraven-watchOS.debug.xcconfig */,
+				CF6472224098200F88F1C47B /* Pods-Stockraven-watchOS.release.xcconfig */,
+				C9098FED67C41D3127DB1EA1 /* Pods-Stockraven-watchOS WatchKit App.debug.xcconfig */,
+				A89604354857857E3F031B07 /* Pods-Stockraven-watchOS WatchKit App.release.xcconfig */,
+				7713CC1DB760403DB424B758 /* Pods-Stockraven-watchOS WatchKit Extension.debug.xcconfig */,
+				8D3AF268972DEF1E27FB73BE /* Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B00B3589246C659400FBB111 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				B00B358A246C65A400FBB111 /* BinarySearch.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		B01078B0246071A2007F8BA3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */,
+				B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */,
+				B05D284A246B28960097B49A /* StockFundamentalsCell.swift */,
+				B06A84D624637DA7009C32EC /* StockDetailViewController+Extensions.swift */,
+				B06A84D22462DCF1009C32EC /* StockDetailTabHeader.swift */,
+				B01078B32460E9B4007F8BA3 /* Alerts */,
+				B0D89FF924620D90008145F1 /* Social */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B01078B32460E9B4007F8BA3 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				B01078B52460E9BD007F8BA3 /* AlertSwitchCell.swift */,
+				B01078B82460E9BE007F8BA3 /* AlertTextFieldCell.swift */,
+				B01078BA2460E9BF007F8BA3 /* AlertViewController.swift */,
+				B01078B72460E9BE007F8BA3 /* DeleteCell.swift */,
+				B01078B42460E9BD007F8BA3 /* ResetCell.swift */,
+				B01078B62460E9BD007F8BA3 /* ResetSelectViewController.swift */,
+				B01078BB2460E9BF007F8BA3 /* SegmentedControlCell.swift */,
+				B01078B92460E9BE007F8BA3 /* SendNotificationTypeCell.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		B015F0CF245E1F4700E8B8B7 = {
 			isa = PBXGroup;
 			children = (
+				B015F0DC245E1F6500E8B8B7 /* Stockraven-iOS */,
+				B015F0F4245E1F7E00E8B8B7 /* Stockraven-macOS */,
+				B015F10C245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App */,
+				B015F11B245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension */,
+				B015F0DB245E1F6500E8B8B7 /* Products */,
+				ACE69BFB5F865DB73C05C731 /* Pods */,
+				B86ABD8D5174A018FEEB8BEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
+		B015F0DB245E1F6500E8B8B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B015F0DA245E1F6500E8B8B7 /* Stockraven.app */,
+				B015F0F3245E1F7E00E8B8B7 /* Stockraven-macOS.app */,
+				B015F105245E1F9C00E8B8B7 /* Stockraven-watchOS.app */,
+				B015F108245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App.app */,
+				B015F117245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B015F0DC245E1F6500E8B8B7 /* Stockraven-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B07B3D44245E6AB600BEB314 /* Stockraven-iOS.entitlements */,
+				B015F0DD245E1F6500E8B8B7 /* AppDelegate.swift */,
+				B015F0DF245E1F6500E8B8B7 /* SceneDelegate.swift */,
+				B00B3589246C659400FBB111 /* DataStructures */,
+				B07B3D34245E63D200BEB314 /* Models */,
+				B015F133245E249400E8B8B7 /* Managers */,
+				B07B3D3F245E658E00BEB314 /* APIs */,
+				B015F134245E24E200E8B8B7 /* Screens */,
+				B015F138245E251200E8B8B7 /* Extensions */,
+				B015F0E6245E1F6600E8B8B7 /* Assets.xcassets */,
+				B07B3D3B245E656300BEB314 /* Colors.xcassets */,
+				B015F0EB245E1F6600E8B8B7 /* Info.plist */,
+				B015F131245E229300E8B8B7 /* GoogleService-Info.plist */,
+			);
+			path = "Stockraven-iOS";
+			sourceTree = "<group>";
+		};
+		B015F0F4245E1F7E00E8B8B7 /* Stockraven-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				B015F0F5245E1F7E00E8B8B7 /* AppDelegate.swift */,
+				B015F0F7245E1F7E00E8B8B7 /* ViewController.swift */,
+				B015F0F9245E1F7F00E8B8B7 /* Assets.xcassets */,
+				B015F0FB245E1F7F00E8B8B7 /* Main.storyboard */,
+				B015F0FE245E1F7F00E8B8B7 /* Info.plist */,
+				B015F0FF245E1F7F00E8B8B7 /* Stockraven_macOS.entitlements */,
+			);
+			path = "Stockraven-macOS";
+			sourceTree = "<group>";
+		};
+		B015F10C245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B015F10D245E1F9C00E8B8B7 /* Interface.storyboard */,
+				B015F110245E1F9D00E8B8B7 /* Assets.xcassets */,
+				B015F112245E1F9D00E8B8B7 /* Info.plist */,
+			);
+			path = "Stockraven-watchOS WatchKit App";
+			sourceTree = "<group>";
+		};
+		B015F11B245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B015F11C245E1F9D00E8B8B7 /* InterfaceController.swift */,
+				B015F11E245E1F9D00E8B8B7 /* ExtensionDelegate.swift */,
+				B015F120245E1F9D00E8B8B7 /* NotificationController.swift */,
+				B015F122245E1F9D00E8B8B7 /* Assets.xcassets */,
+				B015F124245E1F9D00E8B8B7 /* Info.plist */,
+				B015F125245E1F9D00E8B8B7 /* PushNotificationPayload.apns */,
+			);
+			path = "Stockraven-watchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B015F133245E249400E8B8B7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B04B6DE0245E35CB0011238F /* StockManager.swift */,
+				B07B3D39245E654700BEB314 /* ThemeManager.swift */,
+				B05511DF2461B4AE006A52FD /* NotificationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		B015F134245E24E200E8B8B7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B015F0E3245E1F6500E8B8B7 /* Main.storyboard */,
+				B015F0E8245E1F6600E8B8B7 /* LaunchScreen.storyboard */,
+				B015F147245E25F500E8B8B7 /* RootTabBarController.swift */,
+				B015F135245E24F400E8B8B7 /* Auth */,
+				B015F149245E271C00E8B8B7 /* Home */,
+				B01078B0246071A2007F8BA3 /* Detail */,
+				B05511E12461B740006A52FD /* Notifications */,
+				B0D89FF62461E305008145F1 /* User */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B015F135245E24F400E8B8B7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B015F136245E250400E8B8B7 /* SignInViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		B015F138245E251200E8B8B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B015F139245E251F00E8B8B7 /* Easings.swift */,
+				B015F13B245E252F00E8B8B7 /* UIColor+Extensions.swift */,
+				B015F13D245E253C00E8B8B7 /* UIFont+Extensions.swift */,
+				B015F13F245E255100E8B8B7 /* UIView+Extensions.swift */,
+				B015F141245E259300E8B8B7 /* Date+Extensions.swift */,
+				B015F143245E259B00E8B8B7 /* Double+Extensions.swift */,
+				B015F145245E25A300E8B8B7 /* Notification+Extensions.swift */,
+				B0D89FFE246220BF008145F1 /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B015F149245E271C00E8B8B7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B09B993A2464777F002EC1F7 /* Texture */,
+				B015F14A245E272800E8B8B7 /* HomeViewController.swift */,
+				B0B9AFE0245F844600D17D9C /* Home+CollectionViewExtension.swift */,
+				B07B3D40245E67AD00BEB314 /* TickerSearchResultsController.swift */,
+				B05D2848246ACA9E0097B49A /* StockCell.swift */,
+				B01078AE24605EBE007F8BA3 /* BidAskView.swift */,
+				B07EA5CF2465D724006A491E /* LiveChartView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B05511E12461B740006A52FD /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B05511E22461B762006A52FD /* NotificationsViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		B07B3D34245E63D200BEB314 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B07B3D35245E63E500BEB314 /* Alert.swift */,
+				B07B3D37245E650800BEB314 /* Stock.swift */,
+				B05511DD2461B41D006A52FD /* AlertNotification.swift */,
+				B0D89FFC24621810008145F1 /* Tweet.swift */,
+				B0D8A00024622482008145F1 /* News.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B07B3D3F245E658E00BEB314 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				B07B3D3D245E658B00BEB314 /* RavenAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		B09B993A2464777F002EC1F7 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				B09B993B24647791002EC1F7 /* TextureHomeViewController.swift */,
+				B07EA5C9246479FD006A491E /* StockCellNode.swift */,
+				B07EA5CB24647C70006A491E /* BidAskNode.swift */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		B0D89FF62461E305008145F1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B0D89FF72461E313008145F1 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B0D89FF924620D90008145F1 /* Social */ = {
+			isa = PBXGroup;
+			children = (
+				B0D89FFA24620D9A008145F1 /* TwitterCell.swift */,
+				B0D8A002246225C0008145F1 /* NewsCell.swift */,
+				B06A84D42462EFC3009C32EC /* AlertCell.swift */,
+			);
+			path = Social;
+			sourceTree = "<group>";
+		};
+		B86ABD8D5174A018FEEB8BEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B07B3D45245E6AB700BEB314 /* NetworkExtension.framework */,
+				35CA05D8C46AEF4576E3466C /* Pods_Stockraven_iOS.framework */,
+				D6BB29844D2E5E5A97E42E8B /* Pods_Stockraven_macOS.framework */,
+				551B43DF20EE8A1AB7090B54 /* Pods_Stockraven_watchOS.framework */,
+				E3AEECC94219F0EE6C4FFC11 /* Pods_Stockraven_watchOS_WatchKit_App.framework */,
+				8C89AC15B6E4ED41286F7456 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B015F0D9245E1F6500E8B8B7 /* Stockraven-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015F0EC245E1F6600E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-iOS" */;
+			buildPhases = (
+				7598B6EF6DC83690B25FB14A /* [CP] Check Pods Manifest.lock */,
+				B015F0D6245E1F6500E8B8B7 /* Sources */,
+				B015F0D7245E1F6500E8B8B7 /* Frameworks */,
+				B015F0D8245E1F6500E8B8B7 /* Resources */,
+				8D349FA2C3A48E3904B0D21D /* [CP] Embed Pods Frameworks */,
+				F32DCC253190EAF1E0F79C94 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stockraven-iOS";
+			productName = "Stockraven-iOS";
+			productReference = B015F0DA245E1F6500E8B8B7 /* Stockraven.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B015F0F2245E1F7E00E8B8B7 /* Stockraven-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015F100245E1F7F00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-macOS" */;
+			buildPhases = (
+				5DD0BFA3AE045DB2D15EEC02 /* [CP] Check Pods Manifest.lock */,
+				B015F0EF245E1F7E00E8B8B7 /* Sources */,
+				B015F0F0245E1F7E00E8B8B7 /* Frameworks */,
+				B015F0F1245E1F7E00E8B8B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stockraven-macOS";
+			productName = "Stockraven-macOS";
+			productReference = B015F0F3245E1F7E00E8B8B7 /* Stockraven-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B015F104245E1F9C00E8B8B7 /* Stockraven-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015F12E245E1F9D00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-watchOS" */;
+			buildPhases = (
+				E26379C49DA8DAFC9FB14A07 /* [CP] Check Pods Manifest.lock */,
+				B015F103245E1F9C00E8B8B7 /* Resources */,
+				B015F12D245E1F9D00E8B8B7 /* Embed Watch Content */,
+				6BA689078556FE0D67F403AA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B015F10B245E1F9C00E8B8B7 /* PBXTargetDependency */,
+			);
+			name = "Stockraven-watchOS";
+			productName = "Stockraven-watchOS";
+			productReference = B015F105245E1F9C00E8B8B7 /* Stockraven-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		B015F107245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015F12A245E1F9D00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-watchOS WatchKit App" */;
+			buildPhases = (
+				DB3024E1CDF954940035948E /* [CP] Check Pods Manifest.lock */,
+				B015F106245E1F9C00E8B8B7 /* Resources */,
+				B015F129245E1F9D00E8B8B7 /* Embed App Extensions */,
+				68687F26AB4AD7048B283A58 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B015F11A245E1F9D00E8B8B7 /* PBXTargetDependency */,
+			);
+			name = "Stockraven-watchOS WatchKit App";
+			productName = "Stockraven-watchOS WatchKit App";
+			productReference = B015F108245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B015F116245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B015F126245E1F9D00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-watchOS WatchKit Extension" */;
+			buildPhases = (
+				78095A68CF23484078055654 /* [CP] Check Pods Manifest.lock */,
+				B015F113245E1F9D00E8B8B7 /* Sources */,
+				B015F114245E1F9D00E8B8B7 /* Frameworks */,
+				B015F115245E1F9D00E8B8B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stockraven-watchOS WatchKit Extension";
+			productName = "Stockraven-watchOS WatchKit Extension";
+			productReference = B015F117245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B015F0D0245E1F4700E8B8B7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					B015F0D9245E1F6500E8B8B7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					B015F0F2245E1F7E00E8B8B7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					B015F104245E1F9C00E8B8B7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					B015F107245E1F9C00E8B8B7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					B015F116245E1F9D00E8B8B7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
 			};
 			buildConfigurationList = B015F0D3245E1F4700E8B8B7 /* Build configuration list for PBXProject "Stockraven" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -30,12 +661,339 @@
 				Base,
 			);
 			mainGroup = B015F0CF245E1F4700E8B8B7;
+			productRefGroup = B015F0DB245E1F6500E8B8B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B015F0D9245E1F6500E8B8B7 /* Stockraven-iOS */,
+				B015F0F2245E1F7E00E8B8B7 /* Stockraven-macOS */,
+				B015F104245E1F9C00E8B8B7 /* Stockraven-watchOS */,
+				B015F107245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App */,
+				B015F116245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B015F0D8245E1F6500E8B8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07B3D3C245E656300BEB314 /* Colors.xcassets in Resources */,
+				B015F0EA245E1F6600E8B8B7 /* LaunchScreen.storyboard in Resources */,
+				B015F0E7245E1F6600E8B8B7 /* Assets.xcassets in Resources */,
+				B015F0E5245E1F6500E8B8B7 /* Main.storyboard in Resources */,
+				B015F132245E229300E8B8B7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F0F1245E1F7E00E8B8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B015F0FA245E1F7F00E8B8B7 /* Assets.xcassets in Resources */,
+				B015F0FD245E1F7F00E8B8B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F103245E1F9C00E8B8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F106245E1F9C00E8B8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B015F111245E1F9D00E8B8B7 /* Assets.xcassets in Resources */,
+				B015F10F245E1F9C00E8B8B7 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F115245E1F9D00E8B8B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B015F123245E1F9D00E8B8B7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DD0BFA3AE045DB2D15EEC02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockraven-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7598B6EF6DC83690B25FB14A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockraven-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78095A68CF23484078055654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockraven-watchOS WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D349FA2C3A48E3904B0D21D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB3024E1CDF954940035948E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockraven-watchOS WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E26379C49DA8DAFC9FB14A07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockraven-watchOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32DCC253190EAF1E0F79C94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stockraven-iOS/Pods-Stockraven-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B015F0D6245E1F6500E8B8B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06A84D52462EFC3009C32EC /* AlertCell.swift in Sources */,
+				B07B3D41245E67AD00BEB314 /* TickerSearchResultsController.swift in Sources */,
+				B06A84D32462DCF1009C32EC /* StockDetailTabHeader.swift in Sources */,
+				B07EA5CA246479FD006A491E /* StockCellNode.swift in Sources */,
+				B015F13A245E251F00E8B8B7 /* Easings.swift in Sources */,
+				B05D284B246B28960097B49A /* StockFundamentalsCell.swift in Sources */,
+				B015F148245E25F500E8B8B7 /* RootTabBarController.swift in Sources */,
+				B07B3D3E245E658B00BEB314 /* RavenAPI.swift in Sources */,
+				B01078BC2460E9BF007F8BA3 /* ResetCell.swift in Sources */,
+				B015F13C245E252F00E8B8B7 /* UIColor+Extensions.swift in Sources */,
+				B0D89FFB24620D9A008145F1 /* TwitterCell.swift in Sources */,
+				B07EA5D02465D724006A491E /* LiveChartView.swift in Sources */,
+				B06A84D724637DA7009C32EC /* StockDetailViewController+Extensions.swift in Sources */,
+				B015F142245E259300E8B8B7 /* Date+Extensions.swift in Sources */,
+				B01078BE2460E9BF007F8BA3 /* ResetSelectViewController.swift in Sources */,
+				B0D89FFD24621810008145F1 /* Tweet.swift in Sources */,
+				B05511E32461B762006A52FD /* NotificationsViewController.swift in Sources */,
+				B0B9AFE1245F844600D17D9C /* Home+CollectionViewExtension.swift in Sources */,
+				B01078BF2460E9BF007F8BA3 /* DeleteCell.swift in Sources */,
+				B0D8A003246225C0008145F1 /* NewsCell.swift in Sources */,
+				B015F13E245E253C00E8B8B7 /* UIFont+Extensions.swift in Sources */,
+				B015F144245E259B00E8B8B7 /* Double+Extensions.swift in Sources */,
+				B01078C22460E9BF007F8BA3 /* AlertViewController.swift in Sources */,
+				B07B3D36245E63E500BEB314 /* Alert.swift in Sources */,
+				B05511E02461B4AE006A52FD /* NotificationManager.swift in Sources */,
+				B01078C32460E9BF007F8BA3 /* SegmentedControlCell.swift in Sources */,
+				B04B6DE1245E35CB0011238F /* StockManager.swift in Sources */,
+				B05511DE2461B41D006A52FD /* AlertNotification.swift in Sources */,
+				B07B3D38245E650800BEB314 /* Stock.swift in Sources */,
+				B0D89FF82461E313008145F1 /* UserViewController.swift in Sources */,
+				B0D8A00124622482008145F1 /* News.swift in Sources */,
+				B0D89FFF246220BF008145F1 /* UIImageView+Extensions.swift in Sources */,
+				B015F137245E250400E8B8B7 /* SignInViewController.swift in Sources */,
+				B07EA5CE2464AABA006A491E /* StockDetailPageViewController.swift in Sources */,
+				B01078BD2460E9BF007F8BA3 /* AlertSwitchCell.swift in Sources */,
+				B015F146245E25A300E8B8B7 /* Notification+Extensions.swift in Sources */,
+				B07B3D3A245E654700BEB314 /* ThemeManager.swift in Sources */,
+				B01078C02460E9BF007F8BA3 /* AlertTextFieldCell.swift in Sources */,
+				B01078C12460E9BF007F8BA3 /* SendNotificationTypeCell.swift in Sources */,
+				B05D2849246ACA9E0097B49A /* StockCell.swift in Sources */,
+				B01078AF24605EBE007F8BA3 /* BidAskView.swift in Sources */,
+				B015F0DE245E1F6500E8B8B7 /* AppDelegate.swift in Sources */,
+				B09B993C24647791002EC1F7 /* TextureHomeViewController.swift in Sources */,
+				B07EA5CC24647C70006A491E /* BidAskNode.swift in Sources */,
+				B015F140245E255100E8B8B7 /* UIView+Extensions.swift in Sources */,
+				B015F14B245E272800E8B8B7 /* HomeViewController.swift in Sources */,
+				B00B358B246C65A400FBB111 /* BinarySearch.swift in Sources */,
+				B015F0E0245E1F6500E8B8B7 /* SceneDelegate.swift in Sources */,
+				B01078B2246071C0007F8BA3 /* StockDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F0EF245E1F7E00E8B8B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B015F0F8245E1F7E00E8B8B7 /* ViewController.swift in Sources */,
+				B015F0F6245E1F7E00E8B8B7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B015F113245E1F9D00E8B8B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B015F121245E1F9D00E8B8B7 /* NotificationController.swift in Sources */,
+				B015F11F245E1F9D00E8B8B7 /* ExtensionDelegate.swift in Sources */,
+				B015F11D245E1F9D00E8B8B7 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B015F10B245E1F9C00E8B8B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B015F107245E1F9C00E8B8B7 /* Stockraven-watchOS WatchKit App */;
+			targetProxy = B015F10A245E1F9C00E8B8B7 /* PBXContainerItemProxy */;
+		};
+		B015F11A245E1F9D00E8B8B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B015F116245E1F9D00E8B8B7 /* Stockraven-watchOS WatchKit Extension */;
+			targetProxy = B015F119245E1F9D00E8B8B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B015F0E3245E1F6500E8B8B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B015F0E4245E1F6500E8B8B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B015F0E8245E1F6600E8B8B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B015F0E9245E1F6600E8B8B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B015F0FB245E1F7F00E8B8B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B015F0FC245E1F7F00E8B8B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B015F10D245E1F9C00E8B8B7 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B015F10E245E1F9C00E8B8B7 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B015F0D4245E1F4800E8B8B7 /* Debug */ = {
@@ -50,6 +1008,701 @@
 			};
 			name = Release;
 		};
+		B015F0ED245E1F6600E8B8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CE4B3699E938C685A502AC2 /* Pods-Stockraven-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Stockraven-iOS/Stockraven-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Stockraven-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-iOS";
+				PRODUCT_NAME = Stockraven;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B015F0EE245E1F6600E8B8B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCA88E2D4A1A8D68A879818 /* Pods-Stockraven-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Stockraven-iOS/Stockraven-iOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Stockraven-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-iOS";
+				PRODUCT_NAME = Stockraven;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B015F101245E1F7F00E8B8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9245530C5F9C2C4C18489157 /* Pods-Stockraven-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Stockraven-macOS/Stockraven_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Stockraven-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B015F102245E1F7F00E8B8B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7AEB81850A443AD5E052840 /* Pods-Stockraven-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "Stockraven-macOS/Stockraven_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Stockraven-macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B015F127245E1F9D00E8B8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7713CC1DB760403DB424B758 /* Pods-Stockraven-watchOS WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Stockraven-watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		B015F128245E1F9D00E8B8B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D3AF268972DEF1E27FB73BE /* Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Stockraven-watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		B015F12B245E1F9D00E8B8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9098FED67C41D3127DB1EA1 /* Pods-Stockraven-watchOS WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = Stockraven_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "Stockraven-watchOS WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		B015F12C245E1F9D00E8B8B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A89604354857857E3F031B07 /* Pods-Stockraven-watchOS WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = Stockraven_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "Stockraven-watchOS WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		B015F12F245E1F9D00E8B8B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A19B94E4313725EBEE4058F /* Pods-Stockraven-watchOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B015F130245E1F9D00E8B8B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6472224098200F88F1C47B /* Pods-Stockraven-watchOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6BES3VUFCX;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.robertcanton.Stockraven-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -58,6 +1711,51 @@
 			buildConfigurations = (
 				B015F0D4245E1F4800E8B8B7 /* Debug */,
 				B015F0D5245E1F4800E8B8B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015F0EC245E1F6600E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015F0ED245E1F6600E8B8B7 /* Debug */,
+				B015F0EE245E1F6600E8B8B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015F100245E1F7F00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015F101245E1F7F00E8B8B7 /* Debug */,
+				B015F102245E1F7F00E8B8B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015F126245E1F9D00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-watchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015F127245E1F9D00E8B8B7 /* Debug */,
+				B015F128245E1F9D00E8B8B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015F12A245E1F9D00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-watchOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015F12B245E1F9D00E8B8B7 /* Debug */,
+				B015F12C245E1F9D00E8B8B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B015F12E245E1F9D00E8B8B7 /* Build configuration list for PBXNativeTarget "Stockraven-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B015F12F245E1F9D00E8B8B7 /* Debug */,
+				B015F130245E1F9D00E8B8B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,6 @@
+framework module Pods_Stockraven_iOS {
+  umbrella header "Pods-Stockraven-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
