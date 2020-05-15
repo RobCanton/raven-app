@@ -22,7 +22,7 @@ class Stock:Codable {
     
     func addTrade(_ trade:Trade) {
         self.trades.append(trade)
-        if trades.count >= 1000 {
+        if trades.count >= 2000 {
             trades.remove(at: 0)
         }
         

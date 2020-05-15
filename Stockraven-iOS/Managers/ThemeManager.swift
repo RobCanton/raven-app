@@ -24,6 +24,14 @@ enum Theme:String {
         return UIColor(named: "\(self.rawValue):secondary")!
     }
     
+    var positive:UIColor {
+        return UIColor(named: "basic:positive")!
+    }
+    
+    var negative:UIColor {
+        return UIColor(named: "basic:negative")!
+    }
+    
     
     static var current = Theme.basicBlue
     static let all:[Theme] = [

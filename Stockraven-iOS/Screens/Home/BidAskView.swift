@@ -13,10 +13,10 @@ class BidAskView:UIView {
     private var barView:UIView!
     private var bidBarView:UIView!
     private var askBarView:UIView!
-    private var bidSizeLabel:UILabel!
-    private var askSizeLabel:UILabel!
-    private var bidPriceLabel:UILabel!
-    private var askPriceLabel:UILabel!
+    var bidSizeLabel:UILabel!
+    var askSizeLabel:UILabel!
+    var bidPriceLabel:UILabel!
+    var askPriceLabel:UILabel!
     private var bidBoxView:UIView!
     private var askBoxView:UIView!
     

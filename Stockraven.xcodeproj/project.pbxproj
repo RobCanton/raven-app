@@ -12,6 +12,8 @@
 		2B4D53FFFBB1E48FD4D8E055 /* Pods_Stockraven_watchOS_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AEECC94219F0EE6C4FFC11 /* Pods_Stockraven_watchOS_WatchKit_App.framework */; };
 		73CBB5AB380E509B83BF8FE8 /* Pods_Stockraven_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA05D8C46AEF4576E3466C /* Pods_Stockraven_iOS.framework */; };
 		B00B358B246C65A400FBB111 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358A246C65A400FBB111 /* BinarySearch.swift */; };
+		B00B358D246CBF6000FBB111 /* AlertsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */; };
+		B00B358F246CC0B600FBB111 /* StockTitleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358E246CC0B600FBB111 /* StockTitleHeaderCell.swift */; };
 		B01078AF24605EBE007F8BA3 /* BidAskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078AE24605EBE007F8BA3 /* BidAskView.swift */; };
 		B01078B2246071C0007F8BA3 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */; };
 		B01078BC2460E9BF007F8BA3 /* ResetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01078B42460E9BD007F8BA3 /* ResetCell.swift */; };
@@ -66,12 +68,31 @@
 		B07B3D3E245E658B00BEB314 /* RavenAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D3D245E658B00BEB314 /* RavenAPI.swift */; };
 		B07B3D41245E67AD00BEB314 /* TickerSearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07B3D40245E67AD00BEB314 /* TickerSearchResultsController.swift */; };
 		B07B3D46245E6AB700BEB314 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07B3D45245E6AB700BEB314 /* NetworkExtension.framework */; };
-		B07EA5CA246479FD006A491E /* StockCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5C9246479FD006A491E /* StockCellNode.swift */; };
-		B07EA5CC24647C70006A491E /* BidAskNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CB24647C70006A491E /* BidAskNode.swift */; };
 		B07EA5CE2464AABA006A491E /* StockDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */; };
-		B07EA5D02465D724006A491E /* LiveChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CF2465D724006A491E /* LiveChartView.swift */; };
-		B09B993C24647791002EC1F7 /* TextureHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B993B24647791002EC1F7 /* TextureHomeViewController.swift */; };
+		B07EA5D02465D724006A491E /* LiveChartMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07EA5CF2465D724006A491E /* LiveChartMiniView.swift */; };
 		B0B9AFE1245F844600D17D9C /* Home+CollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B9AFE0245F844600D17D9C /* Home+CollectionViewExtension.swift */; };
+		B0BCA41E246D7AA500A91753 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA41D246D7AA500A91753 /* DetailViewController.swift */; };
+		B0BCA420246D7AFC00A91753 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA41F246D7AFC00A91753 /* DetailHeaderCell.swift */; };
+		B0BCA422246D90AD00A91753 /* LiveChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA421246D90AD00A91753 /* LiveChartView.swift */; };
+		B0BCA424246D94FB00A91753 /* MultiChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA423246D94FB00A91753 /* MultiChartView.swift */; };
+		B0BCA426246D9FDF00A91753 /* DetailKeyStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */; };
+		B0BCA428246DA9EB00A91753 /* DetailQuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA427246DA9EB00A91753 /* DetailQuoteCell.swift */; };
+		B0BCA42A246E21A600A91753 /* AlertsStackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA429246E21A600A91753 /* AlertsStackCell.swift */; };
+		B0BCA42C246E5D1C00A91753 /* NotesSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA42B246E5D1C00A91753 /* NotesSummaryCell.swift */; };
+		B0BCA42F246F01DC00A91753 /* alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCA42E246F01DC00A91753 /* alert.caf */; };
+		B0BCA430246F01DC00A91753 /* alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCA42E246F01DC00A91753 /* alert.caf */; };
+		B0BCA431246F01DC00A91753 /* alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCA42E246F01DC00A91753 /* alert.caf */; };
+		B0BCA432246F01DC00A91753 /* alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCA42E246F01DC00A91753 /* alert.caf */; };
+		B0BCA433246F01DC00A91753 /* alert.caf in Resources */ = {isa = PBXBuildFile; fileRef = B0BCA42E246F01DC00A91753 /* alert.caf */; };
+		B0BCA435246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA434246F129800A91753 /* RavenAPI+Aggregates.swift */; };
+		B0BCA436246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA434246F129800A91753 /* RavenAPI+Aggregates.swift */; };
+		B0BCA437246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA434246F129800A91753 /* RavenAPI+Aggregates.swift */; };
+		B0BCA439246F18A500A91753 /* Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA438246F18A500A91753 /* Aggregate.swift */; };
+		B0BCA43A246F18A500A91753 /* Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA438246F18A500A91753 /* Aggregate.swift */; };
+		B0BCA43B246F18A500A91753 /* Aggregate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA438246F18A500A91753 /* Aggregate.swift */; };
+		B0BCA43D246F1F0400A91753 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA43C246F1F0400A91753 /* ChartView.swift */; };
+		B0BCA43E246F1F0400A91753 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA43C246F1F0400A91753 /* ChartView.swift */; };
+		B0BCA43F246F1F0400A91753 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BCA43C246F1F0400A91753 /* ChartView.swift */; };
 		B0D89FF82461E313008145F1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FF72461E313008145F1 /* UserViewController.swift */; };
 		B0D89FFB24620D9A008145F1 /* TwitterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FFA24620D9A008145F1 /* TwitterCell.swift */; };
 		B0D89FFD24621810008145F1 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FFC24621810008145F1 /* Tweet.swift */; };
@@ -134,6 +155,8 @@
 		9245530C5F9C2C4C18489157 /* Pods-Stockraven-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-macOS.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-macOS/Pods-Stockraven-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A89604354857857E3F031B07 /* Pods-Stockraven-watchOS WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit App/Pods-Stockraven-watchOS WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		B00B358A246C65A400FBB111 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsSummaryCell.swift; sourceTree = "<group>"; };
+		B00B358E246CC0B600FBB111 /* StockTitleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTitleHeaderCell.swift; sourceTree = "<group>"; };
 		B01078AE24605EBE007F8BA3 /* BidAskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidAskView.swift; sourceTree = "<group>"; };
 		B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
 		B01078B42460E9BD007F8BA3 /* ResetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetCell.swift; sourceTree = "<group>"; };
@@ -198,12 +221,21 @@
 		B07B3D40245E67AD00BEB314 /* TickerSearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSearchResultsController.swift; sourceTree = "<group>"; };
 		B07B3D44245E6AB600BEB314 /* Stockraven-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stockraven-iOS.entitlements"; sourceTree = "<group>"; };
 		B07B3D45245E6AB700BEB314 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
-		B07EA5C9246479FD006A491E /* StockCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCellNode.swift; sourceTree = "<group>"; };
-		B07EA5CB24647C70006A491E /* BidAskNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidAskNode.swift; sourceTree = "<group>"; };
 		B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailPageViewController.swift; sourceTree = "<group>"; };
-		B07EA5CF2465D724006A491E /* LiveChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChartView.swift; sourceTree = "<group>"; };
-		B09B993B24647791002EC1F7 /* TextureHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureHomeViewController.swift; sourceTree = "<group>"; };
+		B07EA5CF2465D724006A491E /* LiveChartMiniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChartMiniView.swift; sourceTree = "<group>"; };
 		B0B9AFE0245F844600D17D9C /* Home+CollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+CollectionViewExtension.swift"; sourceTree = "<group>"; };
+		B0BCA41D246D7AA500A91753 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B0BCA41F246D7AFC00A91753 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
+		B0BCA421246D90AD00A91753 /* LiveChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChartView.swift; sourceTree = "<group>"; };
+		B0BCA423246D94FB00A91753 /* MultiChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiChartView.swift; sourceTree = "<group>"; };
+		B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailKeyStatsCell.swift; sourceTree = "<group>"; };
+		B0BCA427246DA9EB00A91753 /* DetailQuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuoteCell.swift; sourceTree = "<group>"; };
+		B0BCA429246E21A600A91753 /* AlertsStackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsStackCell.swift; sourceTree = "<group>"; };
+		B0BCA42B246E5D1C00A91753 /* NotesSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesSummaryCell.swift; sourceTree = "<group>"; };
+		B0BCA42E246F01DC00A91753 /* alert.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alert.caf; sourceTree = "<group>"; };
+		B0BCA434246F129800A91753 /* RavenAPI+Aggregates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RavenAPI+Aggregates.swift"; sourceTree = "<group>"; };
+		B0BCA438246F18A500A91753 /* Aggregate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aggregate.swift; sourceTree = "<group>"; };
+		B0BCA43C246F1F0400A91753 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		B0D89FF72461E313008145F1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		B0D89FFA24620D9A008145F1 /* TwitterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCell.swift; sourceTree = "<group>"; };
 		B0D89FFC24621810008145F1 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
@@ -291,9 +323,17 @@
 		B01078B0246071A2007F8BA3 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B0BCA41D246D7AA500A91753 /* DetailViewController.swift */,
+				B0BCA41F246D7AFC00A91753 /* DetailHeaderCell.swift */,
+				B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */,
+				B0BCA427246DA9EB00A91753 /* DetailQuoteCell.swift */,
+				B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */,
+				B0BCA429246E21A600A91753 /* AlertsStackCell.swift */,
+				B0BCA42B246E5D1C00A91753 /* NotesSummaryCell.swift */,
 				B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */,
 				B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */,
 				B05D284A246B28960097B49A /* StockFundamentalsCell.swift */,
+				B00B358E246CC0B600FBB111 /* StockTitleHeaderCell.swift */,
 				B06A84D624637DA7009C32EC /* StockDetailViewController+Extensions.swift */,
 				B06A84D22462DCF1009C32EC /* StockDetailTabHeader.swift */,
 				B01078B32460E9B4007F8BA3 /* Alerts */,
@@ -355,6 +395,7 @@
 				B015F134245E24E200E8B8B7 /* Screens */,
 				B015F138245E251200E8B8B7 /* Extensions */,
 				B015F0E6245E1F6600E8B8B7 /* Assets.xcassets */,
+				B0BCA42D246F019100A91753 /* Resources */,
 				B07B3D3B245E656300BEB314 /* Colors.xcassets */,
 				B015F0EB245E1F6600E8B8B7 /* Info.plist */,
 				B015F131245E229300E8B8B7 /* GoogleService-Info.plist */,
@@ -449,13 +490,15 @@
 		B015F149245E271C00E8B8B7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B09B993A2464777F002EC1F7 /* Texture */,
 				B015F14A245E272800E8B8B7 /* HomeViewController.swift */,
 				B0B9AFE0245F844600D17D9C /* Home+CollectionViewExtension.swift */,
 				B07B3D40245E67AD00BEB314 /* TickerSearchResultsController.swift */,
 				B05D2848246ACA9E0097B49A /* StockCell.swift */,
 				B01078AE24605EBE007F8BA3 /* BidAskView.swift */,
-				B07EA5CF2465D724006A491E /* LiveChartView.swift */,
+				B07EA5CF2465D724006A491E /* LiveChartMiniView.swift */,
+				B0BCA421246D90AD00A91753 /* LiveChartView.swift */,
+				B0BCA43C246F1F0400A91753 /* ChartView.swift */,
+				B0BCA423246D94FB00A91753 /* MultiChartView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -476,6 +519,7 @@
 				B05511DD2461B41D006A52FD /* AlertNotification.swift */,
 				B0D89FFC24621810008145F1 /* Tweet.swift */,
 				B0D8A00024622482008145F1 /* News.swift */,
+				B0BCA438246F18A500A91753 /* Aggregate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -484,18 +528,17 @@
 			isa = PBXGroup;
 			children = (
 				B07B3D3D245E658B00BEB314 /* RavenAPI.swift */,
+				B0BCA434246F129800A91753 /* RavenAPI+Aggregates.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
 		};
-		B09B993A2464777F002EC1F7 /* Texture */ = {
+		B0BCA42D246F019100A91753 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B09B993B24647791002EC1F7 /* TextureHomeViewController.swift */,
-				B07EA5C9246479FD006A491E /* StockCellNode.swift */,
-				B07EA5CB24647C70006A491E /* BidAskNode.swift */,
+				B0BCA42E246F01DC00A91753 /* alert.caf */,
 			);
-			path = Texture;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B0D89FF62461E305008145F1 /* User */ = {
@@ -684,6 +727,7 @@
 				B015F0E7245E1F6600E8B8B7 /* Assets.xcassets in Resources */,
 				B015F0E5245E1F6500E8B8B7 /* Main.storyboard in Resources */,
 				B015F132245E229300E8B8B7 /* GoogleService-Info.plist in Resources */,
+				B0BCA42F246F01DC00A91753 /* alert.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +737,7 @@
 			files = (
 				B015F0FA245E1F7F00E8B8B7 /* Assets.xcassets in Resources */,
 				B015F0FD245E1F7F00E8B8B7 /* Main.storyboard in Resources */,
+				B0BCA430246F01DC00A91753 /* alert.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +745,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BCA431246F01DC00A91753 /* alert.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +755,7 @@
 			files = (
 				B015F111245E1F9D00E8B8B7 /* Assets.xcassets in Resources */,
 				B015F10F245E1F9C00E8B8B7 /* Interface.storyboard in Resources */,
+				B0BCA432246F01DC00A91753 /* alert.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +764,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B015F123245E1F9D00E8B8B7 /* Assets.xcassets in Resources */,
+				B0BCA433246F01DC00A91753 /* alert.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -875,22 +923,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				B06A84D52462EFC3009C32EC /* AlertCell.swift in Sources */,
+				B0BCA420246D7AFC00A91753 /* DetailHeaderCell.swift in Sources */,
 				B07B3D41245E67AD00BEB314 /* TickerSearchResultsController.swift in Sources */,
 				B06A84D32462DCF1009C32EC /* StockDetailTabHeader.swift in Sources */,
-				B07EA5CA246479FD006A491E /* StockCellNode.swift in Sources */,
 				B015F13A245E251F00E8B8B7 /* Easings.swift in Sources */,
 				B05D284B246B28960097B49A /* StockFundamentalsCell.swift in Sources */,
 				B015F148245E25F500E8B8B7 /* RootTabBarController.swift in Sources */,
 				B07B3D3E245E658B00BEB314 /* RavenAPI.swift in Sources */,
+				B0BCA42C246E5D1C00A91753 /* NotesSummaryCell.swift in Sources */,
 				B01078BC2460E9BF007F8BA3 /* ResetCell.swift in Sources */,
+				B0BCA428246DA9EB00A91753 /* DetailQuoteCell.swift in Sources */,
+				B0BCA42A246E21A600A91753 /* AlertsStackCell.swift in Sources */,
 				B015F13C245E252F00E8B8B7 /* UIColor+Extensions.swift in Sources */,
 				B0D89FFB24620D9A008145F1 /* TwitterCell.swift in Sources */,
-				B07EA5D02465D724006A491E /* LiveChartView.swift in Sources */,
+				B07EA5D02465D724006A491E /* LiveChartMiniView.swift in Sources */,
 				B06A84D724637DA7009C32EC /* StockDetailViewController+Extensions.swift in Sources */,
+				B0BCA439246F18A500A91753 /* Aggregate.swift in Sources */,
 				B015F142245E259300E8B8B7 /* Date+Extensions.swift in Sources */,
+				B0BCA422246D90AD00A91753 /* LiveChartView.swift in Sources */,
 				B01078BE2460E9BF007F8BA3 /* ResetSelectViewController.swift in Sources */,
+				B0BCA43D246F1F0400A91753 /* ChartView.swift in Sources */,
 				B0D89FFD24621810008145F1 /* Tweet.swift in Sources */,
 				B05511E32461B762006A52FD /* NotificationsViewController.swift in Sources */,
+				B0BCA41E246D7AA500A91753 /* DetailViewController.swift in Sources */,
 				B0B9AFE1245F844600D17D9C /* Home+CollectionViewExtension.swift in Sources */,
 				B01078BF2460E9BF007F8BA3 /* DeleteCell.swift in Sources */,
 				B0D8A003246225C0008145F1 /* NewsCell.swift in Sources */,
@@ -908,20 +963,23 @@
 				B0D89FFF246220BF008145F1 /* UIImageView+Extensions.swift in Sources */,
 				B015F137245E250400E8B8B7 /* SignInViewController.swift in Sources */,
 				B07EA5CE2464AABA006A491E /* StockDetailPageViewController.swift in Sources */,
+				B0BCA435246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */,
 				B01078BD2460E9BF007F8BA3 /* AlertSwitchCell.swift in Sources */,
+				B0BCA424246D94FB00A91753 /* MultiChartView.swift in Sources */,
 				B015F146245E25A300E8B8B7 /* Notification+Extensions.swift in Sources */,
 				B07B3D3A245E654700BEB314 /* ThemeManager.swift in Sources */,
+				B00B358F246CC0B600FBB111 /* StockTitleHeaderCell.swift in Sources */,
 				B01078C02460E9BF007F8BA3 /* AlertTextFieldCell.swift in Sources */,
 				B01078C12460E9BF007F8BA3 /* SendNotificationTypeCell.swift in Sources */,
 				B05D2849246ACA9E0097B49A /* StockCell.swift in Sources */,
+				B00B358D246CBF6000FBB111 /* AlertsSummaryCell.swift in Sources */,
 				B01078AF24605EBE007F8BA3 /* BidAskView.swift in Sources */,
 				B015F0DE245E1F6500E8B8B7 /* AppDelegate.swift in Sources */,
-				B09B993C24647791002EC1F7 /* TextureHomeViewController.swift in Sources */,
-				B07EA5CC24647C70006A491E /* BidAskNode.swift in Sources */,
 				B015F140245E255100E8B8B7 /* UIView+Extensions.swift in Sources */,
 				B015F14B245E272800E8B8B7 /* HomeViewController.swift in Sources */,
 				B00B358B246C65A400FBB111 /* BinarySearch.swift in Sources */,
 				B015F0E0245E1F6500E8B8B7 /* SceneDelegate.swift in Sources */,
+				B0BCA426246D9FDF00A91753 /* DetailKeyStatsCell.swift in Sources */,
 				B01078B2246071C0007F8BA3 /* StockDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -930,7 +988,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BCA43A246F18A500A91753 /* Aggregate.swift in Sources */,
+				B0BCA436246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */,
 				B015F0F8245E1F7E00E8B8B7 /* ViewController.swift in Sources */,
+				B0BCA43E246F1F0400A91753 /* ChartView.swift in Sources */,
 				B015F0F6245E1F7E00E8B8B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -940,8 +1001,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B015F121245E1F9D00E8B8B7 /* NotificationController.swift in Sources */,
+				B0BCA43B246F18A500A91753 /* Aggregate.swift in Sources */,
 				B015F11F245E1F9D00E8B8B7 /* ExtensionDelegate.swift in Sources */,
 				B015F11D245E1F9D00E8B8B7 /* InterfaceController.swift in Sources */,
+				B0BCA437246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */,
+				B0BCA43F246F1F0400A91753 /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

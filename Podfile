@@ -15,9 +15,9 @@ target 'Stockraven-iOS' do
   pod 'GoogleSignIn'
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
   pod 'SwiftMessages'
-  pod 'JJFloatingActionButton' 
-  pod 'Texture'
+  pod 'JJFloatingActionButton'
   pod 'Differ'
+  pod 'MSPeekCollectionViewDelegateImplementation'
 end
 
 target 'Stockraven-macOS' do

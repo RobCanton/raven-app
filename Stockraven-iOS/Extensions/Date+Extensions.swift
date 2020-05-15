@@ -86,4 +86,19 @@ extension Date
         return "\(timeStr) ago"
     }
     
+
+}
+
+extension String {
+    func toDate(withFormat format: String = "yyyy-MM-dd HH:mm:ss")-> Date?{
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "EDT")
+        dateFormatter.calendar = Calendar.current
+        dateFormatter.dateFormat = format
+        let date = dateFormatter.date(from: self)
+
+        return date
+
+    }
 }

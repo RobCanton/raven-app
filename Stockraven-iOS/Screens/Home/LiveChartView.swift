@@ -1,8 +1,8 @@
 //
-//  LiveChartView.swift
+//  ChartView.swift
 //  Stockraven-iOS
 //
-//  Created by Robert Canton on 2020-05-08.
+//  Created by Robert Canton on 2020-05-14.
 //
 
 import Foundation
@@ -34,7 +34,7 @@ class LiveChartView:UIView {
     }
     
     private func setup() {
-        self.backgroundColor = UIColor.clear//systemBackground
+        self.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.075)
         
         self.clearsContextBeforeDrawing = true
         
@@ -42,9 +42,7 @@ class LiveChartView:UIView {
         RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
         
         self.transform = CGAffineTransform(scaleX: 1, y: -1)
-        //let tap = UITapGestureRecognizer(target: self, action: #selector(addRandomValue))
-        //self.addGestureRecognizer(tap)
-        //self.isUserInteractionEnabled = true
+        
     }
     
     override func draw(_ rect: CGRect) {
@@ -59,12 +57,9 @@ class LiveChartView:UIView {
         
         let diffY = points[0].value-baseValue
         let changePercent = diffY / baseValue
-        //print("change: \(changePercent)")
+        
         let newY = (rect.maxY * 50) * changePercent
         aPath.move(to: CGPoint(x: (1 - (CGFloat(diff)/denominator)) * frontPointX, y: rect.midY + newY))
-        //aPath.move(to: CGPoint(x: 0, y: rect.midY ))
-//
-        
 
         for i in 0..<points.count {
 
@@ -75,17 +70,11 @@ class LiveChartView:UIView {
             let _changePercent = _diffY / baseValue
             let _newY = (rect.maxY * 50) * _changePercent
             aPath.addLine(to: CGPoint(x: (1 - (CGFloat(_diff)/denominator)) * frontPointX, y: rect.midY + _newY))
-
+            
         }
-
 
         aPath.addLine(to: CGPoint(x: frontPointX, y: rect.midY))
         
-        // Keep using the method addLine until you get to the one where about to close the path
-        //aPath.close()
-
-        // If you want to stroke it with a red color
-        //UIColor.red.set()
         if positive {
             UIColor(hex: "33E190").set()
         } else {
@@ -117,57 +106,5 @@ class LiveChartView:UIView {
         points = _points
         redraw()
     }
-    
-//    @objc func addRandomValue(_ tap:UITapGestureRecognizer) {
-//        let xPos = tap.location(in: self).x
-//
-//        var newValue = baseValue
-//        if xPos > self.bounds.midX {
-//            newValue += CGFloat.random(in: 0...4)
-//        } else {
-//            newValue -= CGFloat.random(in: 0...4)
-//        }
-//        addValue(newValue, positive: newValue >= 0)
-//    }
-//
-//    func addValue(_ newValue:CGFloat, positive:Bool) {
-//        self.positive = positive
-//        let point = TimePoint(value: baseValue, timestamp: Date().timeIntervalSince1970)
-//
-//        baseValue = newValue
-//
-//        points.append(point)
-//
-//        if points.count >= 2 {
-//            let now = Date().timeIntervalSince1970
-//            var t:Double = points[1].timestamp
-//
-//            outerloop: while (now - t > timeDenominator) {
-//
-//                points.removeFirst()
-//                if points.count >= 2 {
-//                    t = points[1].timestamp
-//                } else {
-//                    break outerloop
-//                }
-//
-//            }
-//        }
-//
-//
-//        redraw()
-//
-//
-//
-//    }
-//
-//    func start(withBase baseValue:CGFloat, positive:Bool) {
-//        self.positive = positive
-//        self.baseValue = baseValue
-//        points = [
-//            TimePoint(value: baseValue,
-//                      timestamp: Date().timeIntervalSince1970)
-//        ]
-//        redraw()
-//    }
+ 
 }

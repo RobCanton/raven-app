@@ -47,7 +47,9 @@ class StockDetailViewController:UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = stock.symbol
         view.backgroundColor = UIColor.systemBackground
+        navigationItem.largeTitleDisplayMode = .never
         
         headerTabView = StockDetailTabHeader()
         headerTabView.delegate = self
@@ -64,14 +66,16 @@ class StockDetailViewController:UIViewController, UITableViewDataSource, UITable
 
         tableView.register(StockCell.self, forCellReuseIdentifier: "cell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "addAlertCell")
-        tableView.register(AlertCell.self, forCellReuseIdentifier: "alertCell")
+        tableView.register(AlertSwitchCell.self, forCellReuseIdentifier: "alertCell")
         tableView.register(HeaderCell.self, forCellReuseIdentifier: "headerCell")
         tableView.register(TwitterCell.self, forCellReuseIdentifier: "twitterCell")
         tableView.register(NewsCell.self, forCellReuseIdentifier: "newsCell")
         tableView.register(StockFundamentalsCell.self, forCellReuseIdentifier: "fundamentalsCell")
+        tableView.register(AlertSummaryCell.self, forCellReuseIdentifier: "alertSummaryCell")
+        tableView.register(StockTitleHeaderCell.self, forCellReuseIdentifier: "titleHeaderCell")
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
-        tableView.separatorStyle = .none
+        //tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16 + 64 + 8, right: 0)
         //tableView.separatorInset = .zero
         tableView.reloadData()
@@ -134,13 +138,15 @@ class StockDetailViewController:UIViewController, UITableViewDataSource, UITable
     }
  
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 2
+        case 1:
+            return 1
         default:
             return 0
         }
@@ -152,17 +158,33 @@ class StockDetailViewController:UIViewController, UITableViewDataSource, UITable
             switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! StockCell
-//                /let stock = StockManager.shared.stocks[indexPath.row]
-//                /cell.observe(stock)
-                cell.separatorInset = .zero
+                cell.configure(stock: stock)
+                cell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "fundamentalsCell", for: indexPath) as! StockFundamentalsCell
+                cell.separatorInset = .zero
                 return cell
             default:
                 break
             }
             break
+        case 1:
+//            if indexPath.row == 0 {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "titleHeaderCell", for: indexPath) as! StockTitleHeaderCell
+//                           cell.titleLabel.text = "Alerts"
+//                           cell.separatorInset = .zero
+//                           return cell
+//            } else {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "alertCell", for: indexPath) as! AlertSwitchCell
+//                cell.textLabel?.text = "Price is over 45.00"
+//                cell.separatorInset = .zero
+//                return cell
+//            }
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "alertSummaryCell", for: indexPath) as! AlertSummaryCell
+            cell.separatorInset = .zero
+            return cell
         default:
             break
         }

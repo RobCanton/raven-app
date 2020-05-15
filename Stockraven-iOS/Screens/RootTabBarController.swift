@@ -23,13 +23,11 @@ class RootTabBarController:UITabBarController {
     
     var screen:Screen = .home
     let homeVC:HomeViewController
-    let textureHomeVC:TextureHomeViewController
     let notificationsVC:NotificationsViewController
     let settingsVC:UserViewController
     
     init() {
         homeVC = HomeViewController()
-        textureHomeVC = TextureHomeViewController()
         notificationsVC = NotificationsViewController()
         settingsVC = UserViewController()
         super.init(nibName: nil, bundle: nil)
@@ -37,10 +35,6 @@ class RootTabBarController:UITabBarController {
         let homeNav = UINavigationController(rootViewController: homeVC)
         homeNav.tabBarItem.image = UIImage(systemName: "house.fill")
         homeNav.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-        
-        let textureHomeNav = UINavigationController(rootViewController: textureHomeVC)
-        textureHomeNav.tabBarItem.image = UIImage(systemName: "house")
-        textureHomeNav.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         
         let notificationsNav = UINavigationController(rootViewController: notificationsVC)
         notificationsNav.tabBarItem.image = UIImage(systemName: "app.badge")

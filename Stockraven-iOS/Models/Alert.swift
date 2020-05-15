@@ -72,6 +72,7 @@ struct Alert:Codable {
         return str
     }
     
+    
     var editable:AlertEditable {
         return AlertEditable(id: id,
                              type: AlertType(rawValue: Int16(type))!,

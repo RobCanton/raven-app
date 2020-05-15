@@ -17,7 +17,7 @@ class StockCell:UITableViewCell {
     var nameLabel:UILabel!
     var priceLabel:UILabel!
     var changeLabel:UILabel!
-    var chartView:LiveChartView!
+    var chartView:LiveChartMiniView!
     var bidAskView:BidAskView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -64,7 +64,7 @@ class StockCell:UITableViewCell {
         
         nameLabel.lastBaselineAnchor.constraint(equalTo: changeLabel.lastBaselineAnchor).isActive = true
         
-        chartView = LiveChartView()
+        chartView = LiveChartMiniView()
         titleRow.addSubview(chartView)
         chartView.constraintToCenter(axis: [.x])
         chartView.constraintToSuperview(0, nil, 0, nil, ignoreSafeArea: true)

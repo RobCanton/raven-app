@@ -31,9 +31,10 @@ class RavenAPI {
         case userAlerts = "user/alerts"
         case socialTwitterSearch = "social/twitter/search"
         case refNews = "ref/news"
+        case refStockAggregates = "ref/stocks/aggs/"
     }
     
-    private static func getURL(for endpoint:Endpoint) -> String {
+    static func getURL(for endpoint:Endpoint) -> String {
         return "\(RavenAPI.host)\(endpoint.rawValue)"
     }
     
@@ -387,7 +388,7 @@ class RavenAPI {
     
     
     
-    private static func authenticatedRequest(_ method:HTTPMethod,
+    static func authenticatedRequest(_ method:HTTPMethod,
                                              url:String,
                                              params:[String:Any]? = nil,
                                              body:[String:Any]?=nil,

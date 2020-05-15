@@ -104,10 +104,15 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //let stockDetailVC = StockDetailViewController(stock: stocks[indexPath.row])
-        //let stock = StockManager.shared.stocks[indexPath.row]
-        //let pageVC = StockDetailPageViewController(stocks: stocks, start: indexPath.row)
-        //navigationController?.pushViewController(pageVC, animated: true)
+        //let pageVC = StockDetailPageViewController(startIndex: indexPath.row)
+        let stock = StockManager.shared.stocks[indexPath.row]
+        //let detailVC = StockDetailViewController(stock: stock)
+        //let detailVC = ParallaxStockViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let detailVC = storyboard.instantiateViewController(identifier: "ParallaxStockDetail") as! ParallaxStockViewController
+        //detailVC.stock = stock
+        let detailVC = DetailViewController(stock: stock)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {

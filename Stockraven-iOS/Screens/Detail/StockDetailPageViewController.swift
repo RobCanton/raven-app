@@ -10,11 +10,12 @@ import UIKit
 
 class StockDetailPageViewController: UIPageViewController {
 
-    var stocks:[Stock]
-    var start:Int
-    init(stocks:[Stock], start:Int = 0) {
-        self.stocks = stocks
-        self.start = start
+    var stocks:[Stock] {
+        return StockManager.shared.stocks
+    }
+    var startIndex:Int
+    init(startIndex:Int = 0) {
+        self.startIndex = startIndex
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
     }
     
@@ -32,13 +33,13 @@ class StockDetailPageViewController: UIPageViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = stocks[start].symbol
+        title = stocks[startIndex].symbol
         navigationItem.largeTitleDisplayMode = .never
         
         dataSource = self
         delegate = self
         
-        let startViewController = orderedViewControllers[start]
+        let startViewController = orderedViewControllers[startIndex]
         setViewControllers([startViewController],
             direction: .forward,
             animated: true,
