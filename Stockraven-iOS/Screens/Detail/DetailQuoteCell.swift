@@ -26,7 +26,7 @@ class DetailQuoteCell:UITableViewCell {
     }
     
     private func setup() {
-        bidAskView = BidAskView()
+        bidAskView = BidAskView(.default)
         contentView.addSubview(bidAskView)
         bidAskView.constraintToSuperview(nil, 16, 16, 16, ignoreSafeArea: true)
         

@@ -13,7 +13,7 @@ class ChartView:UIView {
     var ticks = [AggregateTick]()
     var startTime:Double = 0
     var endTime:Double = 0
-    let tzOffset:Double = 4 * 60 * 60
+    var tzOffset:Double = 0
     var maxValue:CGFloat = 0
     var minValue:CGFloat = 0
     override init(frame: CGRect) {
@@ -27,7 +27,7 @@ class ChartView:UIView {
     }
     
     private func setup() {
-        self.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.075)
+        self.backgroundColor = UIColor.clear
         
         self.clearsContextBeforeDrawing = true
 
@@ -37,9 +37,10 @@ class ChartView:UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        
+        guard ticks.count >= 2 else { return }
         let aPath = UIBezierPath()
-        aPath.move(to: CGPoint(x: 0, y: 0))
+        
+        
         
         let timespan = endTime - startTime
         let spread = maxValue - minValue
@@ -53,11 +54,20 @@ class ChartView:UIView {
             let tick = ticks[i]
             let tickTime = tick.t/1000-tzOffset
             let timeDiff = tickTime - startTime
+            print("t: \(tick.t)")
+            print("timespan: \(timespan)")
+            print("timeDiff: \(timeDiff)")
             
             let x = CGFloat(timeDiff / timespan) * rect.maxX
             let y = (CGFloat(tick.c)-minValue) / spread * rect.maxY
+            print("x: \(x)")
+            print("y: \(y)")
+            if i == 0 {
+                aPath.move(to: CGPoint(x: x, y: y))
+            } else {
+                aPath.addLine(to: CGPoint(x: x, y: y))
+            }
             
-            aPath.addLine(to: CGPoint(x: x, y: y))
             
             print("\(tick.c) | \(tickTime) | \(timeDiff)")
         }
@@ -65,7 +75,15 @@ class ChartView:UIView {
         
         //aPath.addLine(to: CGPoint(x: rect.maxX, y: 0))
         
-        Theme.current.positive.set()
+        let first = ticks.first!
+        let last = ticks.last!
+        
+        if first.c <= last.c {
+            Theme.current.positive.set()
+        } else {
+            Theme.current.negative.set()
+        }
+        
         
         aPath.lineWidth = 1
         aPath.stroke()
@@ -75,11 +93,19 @@ class ChartView:UIView {
         self.setNeedsDisplay()
     }
     
-    func displayTicks(_ ticks:[AggregateTick]) {
+    func startLoading() {
+        UIView.animate(withDuration: 0.05, animations: {
+            self.alpha = 0.0
+        })
+    }
+    
+    func displayTicks(_ data:AggregateResponse) {
+        let ticks = data.results
         guard ticks.count >= 2 else { return }
         
-        startTime = "2020-05-15 09:30:00".toDate()!.timeIntervalSince1970-tzOffset
-        endTime = "2020-05-15 16:00:00".toDate()!.timeIntervalSince1970-tzOffset
+        startTime = data.start
+        endTime = data.end
+        tzOffset = data.offset
         
         let startTick = AggregateTick(v: 0,
                                       vw: 0,
@@ -98,11 +124,9 @@ class ChartView:UIView {
                                     l: 0,
                                     t: (endTime + tzOffset)*1000)
         let endIndex = binarySearch(array: ticks, value: endTick, greater: false) ?? ticks.count - 1
-        print("startI")
         
-        self.ticks = Array(ticks[startIndex...endIndex])/*filter { t in
-            return t.t >= startTime && t.t <= endTime
-        }*/
+        
+        self.ticks = Array(ticks[startIndex...endIndex])
         
         var _maxValue:Double = 0
         var _minValue:Double = Double.greatestFiniteMagnitude
@@ -119,6 +143,10 @@ class ChartView:UIView {
         self.minValue = CGFloat(_minValue)
         
         redraw()
+        
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: .curveEaseOut, animations: {
+            self.alpha = 1.0
+        }, completion: nil)
     }
     
     

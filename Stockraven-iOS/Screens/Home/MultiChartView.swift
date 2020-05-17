@@ -15,10 +15,7 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
     var liveChartView:LiveChartView!
     var chartView:ChartView!
     var collectionView:UICollectionView!
-    
-    let options = [
-        "Live", "1D", "1W", "1M", "3M", "6M", "1Y", "2Y", "5Y", "ALL"
-    ]
+    var selectedTimeframe:AggregateTimeframe = .live
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -31,9 +28,15 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
     
     private func setup() {
         
+        let backdrop = UIView()
+        //backdrop.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.075)
+        self.addSubview(backdrop)
+        backdrop.constraintToSuperview(0, 0, nil, 0, ignoreSafeArea: false)
+        
         liveChartView = LiveChartView()
         self.addSubview(liveChartView)
         liveChartView.constraintToSuperview(0, 0, nil, 0, ignoreSafeArea: false)
+        backdrop.heightAnchor.constraint(equalTo: liveChartView.heightAnchor).isActive = true
         
         chartView = ChartView()
         self.addSubview(chartView)
@@ -74,29 +77,40 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return options.count
+        return AggregateTimeframe.list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ChartOptionCell
-        cell.titleLabel.text = options[indexPath.row]
+        cell.titleLabel.text = AggregateTimeframe.list[indexPath.row].rawValue
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let stock = self.stock else { return }
-        if indexPath.row == 0 {
-            print("Get aggregate!")
+        
+        let timeframe =  AggregateTimeframe.list[indexPath.row]
+        if timeframe == self.selectedTimeframe {
+            return
+        }
+        self.selectedTimeframe = timeframe
+        if timeframe == .live {
             liveChartView.isHidden = false
             chartView.isHidden = true
         } else {
             liveChartView.isHidden = true
             chartView.isHidden = false
-            RavenAPI.getAggregate(for: stock.symbol, multiplier: 10, timespan: .minute, from: Date(), to: Date()) { ticks in
-                print("done!")
-                self.chartView.displayTicks(ticks)
+            chartView.startLoading()
+            
+            RavenAPI.getAggregatePreset(for: stock.symbol,
+                                        timeframe: timeframe) { timeframe, data in
+                                            guard let data = data else { return }
+                                            guard self.selectedTimeframe == timeframe else { return }
+                                            print("Data: \(data)")
+                                            self.chartView.displayTicks(data)
             }
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -119,7 +133,7 @@ class ChartOptionCell:UICollectionViewCell {
     
     private func setup() {
         titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .regular)
+        titleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
         titleLabel.textColor = UIColor.secondaryLabel
         contentView.addSubview(titleLabel)
         titleLabel.constraintToCenter(axis: [.y,.x])
@@ -135,12 +149,12 @@ class ChartOptionCell:UICollectionViewCell {
         didSet {
             if self.isSelected {
                 titleLabel.textColor = .label
-                titleLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .semibold)
+                titleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .semibold)
                 self.backgroundColor = UIColor.label.withAlphaComponent(0.2)
                 
             } else {
                 titleLabel.textColor = .secondaryLabel
-                titleLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .regular)
+                titleLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .regular)
                 self.backgroundColor = UIColor.clear
             }
         }

@@ -77,7 +77,7 @@ class StockCell:UITableViewCell {
         changeLabel.leadingAnchor.constraint(equalTo: chartView.trailingAnchor, constant: 8).isActive = true
         
         
-        bidAskView = BidAskView()
+        bidAskView = BidAskView(.compact)
         contentView.addSubview(bidAskView)
         bidAskView.constraintToSuperview(nil, 16, 16, 16, ignoreSafeArea: true)
         bidAskView.topAnchor.constraint(equalTo: titleRow.bottomAnchor, constant: 12).isActive = true

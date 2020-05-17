@@ -20,6 +20,7 @@ extension NotificationCenter {
         case action(_ screen:Screen, _ action:Action)
         case alertsUpdated
         case triggeredAlertsUpdated
+        case showSideMenu
         
         var id:String {
             switch self {
@@ -39,6 +40,8 @@ extension NotificationCenter {
                 return "alerts-updated"
             case .triggeredAlertsUpdated:
                 return "triggered-alerts-updated"
+            case .showSideMenu:
+                return "show-side-menu"
             }
         }
         

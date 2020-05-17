@@ -32,6 +32,7 @@ class RavenAPI {
         case socialTwitterSearch = "social/twitter/search"
         case refNews = "ref/news"
         case refStockAggregates = "ref/stocks/aggs/"
+        case refStockAggregatePreset = "ref/stocks/aggregate/preset"
     }
     
     static func getURL(for endpoint:Endpoint) -> String {
@@ -113,6 +114,7 @@ class RavenAPI {
     }
     
     struct WatchlistResponse:Codable {
+        let marketStatus:String
         let stocks:[Stock]
         let alerts:[Alert]
     }
@@ -123,18 +125,22 @@ class RavenAPI {
 //
     
     
-    static func getWatchlist(completion: @escaping ((_ stocks:[Stock], _ alerts:[Alert])->())) {
+    static func getWatchlist(completion: @escaping ((_ marketStatus:String?, _ stocks:[Stock], _ alerts:[Alert])->())) {
         let url = getURL(for: .watchlist)
          
         authenticatedRequest(.get, url: url) { data, response, error in
+            var marketStatus:String?
             var stocks = [Stock]()
             var alerts = [Alert]()
             
             if let data = data {
                 do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    print("json: \(json)")
                     let resp = try JSONDecoder().decode(WatchlistResponse.self, from: data)
                     stocks = resp.stocks
                     alerts = resp.alerts
+                    marketStatus = resp.marketStatus
                     
                 } catch {
                     print("Error: \(error.localizedDescription)")
@@ -142,7 +148,7 @@ class RavenAPI {
             }
 
             DispatchQueue.main.async {
-                completion(stocks, alerts)
+                completion(marketStatus, stocks, alerts)
             }
         }
     }

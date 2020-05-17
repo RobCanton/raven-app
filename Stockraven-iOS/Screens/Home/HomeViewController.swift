@@ -26,7 +26,7 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
         
         tableView.delegate = self
         tableView.dataSource = self
-        navigationItem.title = "Market Open"
+        navigationItem.title = StockManager.shared.marketStatus.displayString
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.backgroundColor = UIColor.systemBackground
         navigationController?.navigationBar.tintColor = UIColor.label
@@ -52,7 +52,11 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
         navigationItem.hidesSearchBarWhenScrolling = true
         searchController.hidesNavigationBarDuringPresentation = true
         
-        navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.rightBarButtonItem = editButtonItem
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"),
+                                                           style: .plain,
+                                                           target: self,
+                                                           action: #selector(showSideMenu))
         
         self.extendedLayoutIncludesOpaqueBars = true
         
@@ -77,13 +81,18 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
         NotificationCenter.default.removeObserver(self)
     }
     
+    @objc func showSideMenu() {
+        NotificationCenter.post(.showSideMenu)
+    }
     @objc func stocksUpdated() {
         self.tableView.reloadData()
         NotificationCenter.default.removeObserver(self)
         NotificationCenter.addObserver(self, selector: #selector(stocksUpdated), type: .stocksUpdated)
+        NotificationCenter.addObserver(self, selector: #selector(marketStatusUpdated), type: .marketStatusUpdated)
     }
     
     @objc func marketStatusUpdated() {
+        print("marketStatusUpdated")
         navigationItem.title = StockManager.shared.marketStatus.displayString
     }
     

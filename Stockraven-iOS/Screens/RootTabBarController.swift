@@ -25,6 +25,7 @@ class RootTabBarController:UITabBarController {
     let homeVC:HomeViewController
     let notificationsVC:NotificationsViewController
     let settingsVC:UserViewController
+    var sideMenu:UIView!
     
     init() {
         homeVC = HomeViewController()
@@ -47,10 +48,29 @@ class RootTabBarController:UITabBarController {
         setViewControllers([
             homeNav, notificationsNav, settingsNav
         ], animated: false)
+        
+        sideMenu = UIView()
+        sideMenu.backgroundColor = UIColor.systemOrange
+        view.addSubview(sideMenu)
+        sideMenu.trailingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        sideMenu.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
+        sideMenu.constraintToSuperview(0, nil, 0, nil, ignoreSafeArea: true)
+        
+        let button = UIButton()
+        button.setTitle("hello", for: .normal)
+        sideMenu.addSubview(button)
+        button.constraintToCenter(axis: [.x,.y])
+        button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        
+        view.clipsToBounds = false
     }
     
     required init?(coder: NSCoder) {
         fatalError()
+    }
+    
+    @objc func handleButton() {
+        print("heyo!")
     }
     
     override func viewDidLoad() {
@@ -61,6 +81,16 @@ class RootTabBarController:UITabBarController {
 //        tabBar.setItems([
 //            UITabBarItem(title: nil, image: UIImage(named: "chart"), tag: 0)
 //        ], animated: false)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.addObserver(self, selector: #selector(showSideMenu), type: .showSideMenu)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func presentAlert() {
@@ -116,6 +146,20 @@ class RootTabBarController:UITabBarController {
             SwiftMessages.show(config: config, view: view)
             self.presentAlert()
         })
+    }
+    
+    
+    @objc func showSideMenu() {
+        var frame = view.frame
+        frame.origin.x = view.bounds.width * 0.75
+        
+        let animator = UIViewPropertyAnimator(duration: 0.3, timingParameters: Easings.Cubic.easeOut)
+        animator.addAnimations {
+            self.view.frame = frame
+        }
+        
+        animator.startAnimation()
+       
     }
     
    

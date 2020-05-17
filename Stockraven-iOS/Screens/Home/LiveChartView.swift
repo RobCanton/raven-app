@@ -34,7 +34,7 @@ class LiveChartView:UIView {
     }
     
     private func setup() {
-        self.backgroundColor = UIColor.systemTeal.withAlphaComponent(0.075)
+        self.backgroundColor = UIColor.clear
         
         self.clearsContextBeforeDrawing = true
         
@@ -46,6 +46,7 @@ class LiveChartView:UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        
         let aPath = UIBezierPath()
         
         let frontPointX = rect.maxX * 1.0

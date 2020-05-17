@@ -53,6 +53,7 @@
 		B015F148245E25F500E8B8B7 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F147245E25F500E8B8B7 /* RootTabBarController.swift */; };
 		B015F14B245E272800E8B8B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F14A245E272800E8B8B7 /* HomeViewController.swift */; };
 		B04B6DE1245E35CB0011238F /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B6DE0245E35CB0011238F /* StockManager.swift */; };
+		B04F7BA32470DB8D00C4D73F /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F7BA22470DB8D00C4D73F /* RootContainerViewController.swift */; };
 		B05511DE2461B41D006A52FD /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511DD2461B41D006A52FD /* AlertNotification.swift */; };
 		B05511E02461B4AE006A52FD /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511DF2461B4AE006A52FD /* NotificationManager.swift */; };
 		B05511E32461B762006A52FD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511E22461B762006A52FD /* NotificationsViewController.swift */; };
@@ -205,6 +206,7 @@
 		B015F147245E25F500E8B8B7 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		B015F14A245E272800E8B8B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B04B6DE0245E35CB0011238F /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
+		B04F7BA22470DB8D00C4D73F /* RootContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
 		B05511DD2461B41D006A52FD /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		B05511DF2461B4AE006A52FD /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		B05511E22461B762006A52FD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -325,8 +327,8 @@
 			children = (
 				B0BCA41D246D7AA500A91753 /* DetailViewController.swift */,
 				B0BCA41F246D7AFC00A91753 /* DetailHeaderCell.swift */,
-				B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */,
 				B0BCA427246DA9EB00A91753 /* DetailQuoteCell.swift */,
+				B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */,
 				B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */,
 				B0BCA429246E21A600A91753 /* AlertsStackCell.swift */,
 				B0BCA42B246E5D1C00A91753 /* NotesSummaryCell.swift */,
@@ -455,6 +457,7 @@
 				B015F0E3245E1F6500E8B8B7 /* Main.storyboard */,
 				B015F0E8245E1F6600E8B8B7 /* LaunchScreen.storyboard */,
 				B015F147245E25F500E8B8B7 /* RootTabBarController.swift */,
+				B04F7BA22470DB8D00C4D73F /* RootContainerViewController.swift */,
 				B015F135245E24F400E8B8B7 /* Auth */,
 				B015F149245E271C00E8B8B7 /* Home */,
 				B01078B0246071A2007F8BA3 /* Detail */,
@@ -932,6 +935,7 @@
 				B07B3D3E245E658B00BEB314 /* RavenAPI.swift in Sources */,
 				B0BCA42C246E5D1C00A91753 /* NotesSummaryCell.swift in Sources */,
 				B01078BC2460E9BF007F8BA3 /* ResetCell.swift in Sources */,
+				B04F7BA32470DB8D00C4D73F /* RootContainerViewController.swift in Sources */,
 				B0BCA428246DA9EB00A91753 /* DetailQuoteCell.swift in Sources */,
 				B0BCA42A246E21A600A91753 /* AlertsStackCell.swift in Sources */,
 				B015F13C245E252F00E8B8B7 /* UIColor+Extensions.swift in Sources */,

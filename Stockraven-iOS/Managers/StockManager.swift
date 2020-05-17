@@ -67,7 +67,7 @@ class StockManager {
             }
         }
         
-        socket.on("market-status") { data, ack in
+        socket.on("market.status") { data, ack in
             if let statusStr = data.first as? String,
                 let status = MarketStatus(rawValue: statusStr) {
                 self.marketStatus = status
@@ -154,7 +154,12 @@ class StockManager {
     }
     
     func observe() {
-        RavenAPI.getWatchlist { _stocks, _alerts in
+        RavenAPI.getWatchlist { _marketStatusStr, _stocks, _alerts in
+            if let _marketStatusStr = _marketStatusStr,
+                let _marketStatus = MarketStatus(rawValue: _marketStatusStr) {
+                self.marketStatus = _marketStatus
+                NotificationCenter.post(.marketStatusUpdated)
+            }
             self.stocks = _stocks
             self.stockIndex = [:]
             for i in 0..<self.stocks.count {
