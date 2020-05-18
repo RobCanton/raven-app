@@ -70,6 +70,8 @@ class DetailHeaderCell:UITableViewCell {
         self.stock = stock
         nameLabel.text = stock.details.name
         timeLabel.text = "11:41 AM"
+        chartView.configure(stock)
+        
         NotificationCenter.default.removeObserver(self)
         NotificationCenter.addObserver(self, selector: #selector(updateTradeDisplay), type: .stockTradeUpdated(stock.symbol))
         NotificationCenter.addObserver(self, selector: #selector(updateQuoteDisplay), type: .stockQuoteUpdated(stock.symbol))
@@ -83,7 +85,7 @@ class DetailHeaderCell:UITableViewCell {
         priceLabel?.text = String(format: "%.2f", locale: Locale.current, stock.trades.last?.price ?? 0)
         changeLabel?.text = stock.changeCompositeStr
         changeLabel?.textColor = stock.changeColor
-        chartView.configure(stock)
+        chartView.displayTrades(stock.trades, positive: stock.change ?? 0 >= 0)
     }
     
     @objc private func updateQuoteDisplay() {

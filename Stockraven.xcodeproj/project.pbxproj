@@ -128,6 +128,7 @@
 		B0DA07A424724D3700F56F1A /* CommentsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A324724D3700F56F1A /* CommentsSummaryCell.swift */; };
 		B0DA07A6247258D000F56F1A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A5247258D000F56F1A /* InfoCell.swift */; };
 		B0DA07A824725E7800F56F1A /* SimilarSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A724725E7800F56F1A /* SimilarSummaryCell.swift */; };
+		B0DA07AA24726E6900F56F1A /* GapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A924726E6900F56F1A /* GapCell.swift */; };
 		DAD59BCED675BE30B44A4B05 /* Pods_Stockraven_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B43DF20EE8A1AB7090B54 /* Pods_Stockraven_watchOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -282,6 +283,7 @@
 		B0DA07A324724D3700F56F1A /* CommentsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSummaryCell.swift; sourceTree = "<group>"; };
 		B0DA07A5247258D000F56F1A /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		B0DA07A724725E7800F56F1A /* SimilarSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarSummaryCell.swift; sourceTree = "<group>"; };
+		B0DA07A924726E6900F56F1A /* GapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GapCell.swift; sourceTree = "<group>"; };
 		C9098FED67C41D3127DB1EA1 /* Pods-Stockraven-watchOS WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit App/Pods-Stockraven-watchOS WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		CF6472224098200F88F1C47B /* Pods-Stockraven-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS/Pods-Stockraven-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6BB29844D2E5E5A97E42E8B /* Pods_Stockraven_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -377,6 +379,7 @@
 				B0BCA427246DA9EB00A91753 /* DetailQuoteCell.swift */,
 				B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */,
 				B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */,
+				B0DA07A924726E6900F56F1A /* GapCell.swift */,
 				B0BCA429246E21A600A91753 /* AlertsStackCell.swift */,
 				B0BCA42B246E5D1C00A91753 /* NotesSummaryCell.swift */,
 				B0DA07A324724D3700F56F1A /* CommentsSummaryCell.swift */,
@@ -1041,6 +1044,7 @@
 				B0D89FF82461E313008145F1 /* UserViewController.swift in Sources */,
 				B0D8A00124622482008145F1 /* News.swift in Sources */,
 				B0D89FFF246220BF008145F1 /* UIImageView+Extensions.swift in Sources */,
+				B0DA07AA24726E6900F56F1A /* GapCell.swift in Sources */,
 				B015F137245E250400E8B8B7 /* SignInViewController.swift in Sources */,
 				B07EA5CE2464AABA006A491E /* StockDetailPageViewController.swift in Sources */,
 				B0BCA435246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */,

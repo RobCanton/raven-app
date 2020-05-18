@@ -21,8 +21,12 @@ class DetailViewController:UITableViewController {
         ("52 week high", "63.44"),
         ("52 week low", "17.51")
     ]
+    
+    var alerts:[Alert]
+    
     init(stock:Stock) {
         self.stock = stock
+        self.alerts = StockManager.shared.alerts(for: stock.symbol)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -45,6 +49,7 @@ class DetailViewController:UITableViewController {
         tableView.register(CommentsSummaryCell.self, forCellReuseIdentifier: "commentsCell")
         tableView.register(InfoCell.self, forCellReuseIdentifier: "infoCell")
         tableView.register(SimilarSummaryCell.self, forCellReuseIdentifier: "similarCell")
+        tableView.register(GapCell.self, forCellReuseIdentifier: "gapCell")
         
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
@@ -80,6 +85,7 @@ class DetailViewController:UITableViewController {
     }
     
     @objc func alertsUpdated() {
+        self.alerts = StockManager.shared.alerts(for: stock.symbol)
         self.tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
     }
     
@@ -92,7 +98,7 @@ class DetailViewController:UITableViewController {
         case 0:
             return 2
         case 1:
-            return 1 + 3
+            return 1 + alerts.count + 1
         case 2:
             return 1 + 1
         case 3:
@@ -133,10 +139,17 @@ class DetailViewController:UITableViewController {
                 cell.titleLabel.text = "My Alerts"
                 cell.button.setTitle(nil, for: .normal)
                 cell.button.setImage(UIImage(systemName: "plus", withConfiguration: nil), for: .normal)
+                cell.button.addTarget(self, action: #selector(handleNewAlert), for: .touchUpInside)
+                return cell
+            case alerts.count + 1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "gapCell", for: indexPath) as! GapCell
+                cell.backgroundColor = UIColor.blue
+                cell.textLabel?.text = "asd"
+                cell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
                 return cell
             default:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "alertCell", for: indexPath) as! AlertRow
-                if indexPath.row == 3 {
+                if indexPath.row == alerts.count {
                     cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
                 } else {
                     cell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
@@ -198,21 +211,26 @@ class DetailViewController:UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.section {
+        case 1:
+            if indexPath.row > 0 {
+                let alert = alerts[indexPath.row-1]
+                let alertVC = AlertViewController(stock: stock, alert: alert)
+                let navVC = UINavigationController(rootViewController: alertVC)
+                self.present(navVC, animated: true, completion: nil)
+            }
+            break
+        default:
+            break
+        }
     }
-}
-
-extension DetailViewController:AlertsSummaryDelegate {
-    func alertsSummaryAddAlert() {
+    
+    @objc func handleNewAlert() {
         let alertVC = AlertViewController(stock: stock)
         let navVC = UINavigationController(rootViewController: alertVC)
         self.present(navVC, animated: true, completion: nil)
     }
     
-    func alertsSummary(didSelect alert: Alert) {
-        let alertVC = AlertViewController(stock: stock, alert: alert)
-        let navVC = UINavigationController(rootViewController: alertVC)
-        self.present(navVC, animated: true, completion: nil)
-    }
 }
 
 extension DetailViewController:NotesSummaryDelegate {

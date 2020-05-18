@@ -83,8 +83,10 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
-    private func displayTrades(_ trades:[Stock.Trade], positive:Bool) {
-        liveChartView.displayTrades(trades, positive: positive)
+    func displayTrades(_ trades:[Stock.Trade], positive:Bool) {
+        if selectedTimeframe == .live {
+            liveChartView.displayTrades(trades, positive: positive)
+        }
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
