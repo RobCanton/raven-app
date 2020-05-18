@@ -17,7 +17,8 @@ class StockCell:UITableViewCell {
     var nameLabel:UILabel!
     var priceLabel:UILabel!
     var changeLabel:UILabel!
-    var chartView:LiveChartMiniView!
+    var liveChartView:LiveChartMiniView!
+    var chartView:ChartView!
     var bidAskView:BidAskView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -64,17 +65,26 @@ class StockCell:UITableViewCell {
         
         nameLabel.lastBaselineAnchor.constraint(equalTo: changeLabel.lastBaselineAnchor).isActive = true
         
-        chartView = LiveChartMiniView()
-        titleRow.addSubview(chartView)
-        chartView.constraintToCenter(axis: [.x])
-        chartView.constraintToSuperview(0, nil, 0, nil, ignoreSafeArea: true)
-        chartView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.2).isActive = true
+        let chartContainer = UIView()
+        titleRow.addSubview(chartContainer)
+        chartContainer.constraintToCenter(axis: [.x])
+        chartContainer.constraintToSuperview(8, nil, 8, nil, ignoreSafeArea: true)
+        chartContainer.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.2).isActive = true
         
-        symbolLabel.trailingAnchor.constraint(equalTo: chartView.leadingAnchor, constant: -8).isActive = true
-        nameLabel.trailingAnchor.constraint(equalTo: chartView.leadingAnchor, constant: -8).isActive = true
+        liveChartView = LiveChartMiniView()
+        chartContainer.addSubview(liveChartView)
+        liveChartView.constraintToSuperview()
         
-        priceLabel.leadingAnchor.constraint(equalTo: chartView.trailingAnchor, constant: 8).isActive = true
-        changeLabel.leadingAnchor.constraint(equalTo: chartView.trailingAnchor, constant: 8).isActive = true
+        chartView = ChartView()
+        chartContainer.addSubview(chartView)
+        chartView.constraintToSuperview()
+        chartView.isHidden = true
+        
+        symbolLabel.trailingAnchor.constraint(equalTo: chartContainer.leadingAnchor, constant: -8).isActive = true
+        nameLabel.trailingAnchor.constraint(equalTo: chartContainer.leadingAnchor, constant: -8).isActive = true
+        
+        priceLabel.leadingAnchor.constraint(equalTo: chartContainer.trailingAnchor, constant: 8).isActive = true
+        changeLabel.leadingAnchor.constraint(equalTo: chartContainer.trailingAnchor, constant: 8).isActive = true
         
         
         bidAskView = BidAskView(.compact)
@@ -98,8 +108,6 @@ class StockCell:UITableViewCell {
         nameLabel.text = stock.details.name
         updateTradeDisplay()
         bidAskView.displayQuote(stock.lastQuote)
-        
-        //
     }
     
     @objc private func updateTradeDisplay() {
@@ -107,7 +115,17 @@ class StockCell:UITableViewCell {
         priceLabel?.text = String(format: "%.2f", locale: Locale.current, stock.trades.last?.price ?? 0)
         changeLabel?.text = stock.changeCompositeStr
         changeLabel?.textColor = stock.changeColor
-        chartView.displayTrades(stock.trades, positive: (stock.change ?? 0) >= 0)
+        
+        if StockManager.shared.marketStatus == .closed,
+            let intraday = stock.intraday {
+            chartView.isHidden = false
+            liveChartView.isHidden = true
+            chartView.displayTicks(intraday)
+        } else {
+            chartView.isHidden = true
+            liveChartView.isHidden = false
+            liveChartView.displayTrades(stock.trades, positive: (stock.change ?? 0) >= 0)
+        }
     }
     
     @objc private func updateQuoteDisplay() {

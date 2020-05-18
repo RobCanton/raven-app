@@ -16,6 +16,8 @@ class ChartView:UIView {
     var tzOffset:Double = 0
     var maxValue:CGFloat = 0
     var minValue:CGFloat = 0
+    var guideValue:Double?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -38,12 +40,25 @@ class ChartView:UIView {
     
     override func draw(_ rect: CGRect) {
         guard ticks.count >= 2 else { return }
-        let aPath = UIBezierPath()
-        
-        
         
         let timespan = endTime - startTime
         let spread = maxValue - minValue
+        
+        if let guideValue = guideValue {
+            let guidePath = UIBezierPath()
+            
+            let guideY = (CGFloat(guideValue)-minValue) / spread * rect.maxY
+            guidePath.move(to: CGPoint(x: 0, y: guideY))
+            guidePath.addLine(to: CGPoint(x: rect.maxX, y: guideY))
+            UIColor.secondaryLabel.set()
+            guidePath.lineWidth = 1
+            let pattern: [CGFloat] = [2.0, 2.0]
+            guidePath.setLineDash(pattern, count: 2, phase: 0.0)
+            guidePath.stroke()
+
+        }
+        
+        let aPath = UIBezierPath()
         
         print("startTime: \(startTime)")
         print("max: \(maxValue)")
@@ -87,6 +102,7 @@ class ChartView:UIView {
         
         aPath.lineWidth = 1
         aPath.stroke()
+        
     }
     
     @objc func redraw() {
@@ -99,10 +115,11 @@ class ChartView:UIView {
         })
     }
     
-    func displayTicks(_ data:AggregateResponse) {
+    func displayTicks(_ data:AggregateResponse, guide:Double?=nil) {
         let ticks = data.results
         guard ticks.count >= 2 else { return }
         
+        self.guideValue = guide
         startTime = data.start
         endTime = data.end
         tzOffset = data.offset
@@ -136,6 +153,16 @@ class ChartView:UIView {
             }
             if tick.c < _minValue {
                 _minValue = tick.c
+            }
+        }
+        
+        if guideValue != nil {
+            if guideValue! > _maxValue {
+                _maxValue = guideValue!
+            }
+            
+            if guideValue! < _minValue {
+                _minValue = guideValue!
             }
         }
         

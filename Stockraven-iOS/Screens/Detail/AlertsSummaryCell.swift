@@ -42,9 +42,9 @@ class AlertSummaryCell:UITableViewCell, UICollectionViewDataSource, UICollection
         self.selectionStyle = .none
         titleLabel = UILabel()
         contentView.addSubview(titleLabel)
-        titleLabel.constraintToSuperview(0, 16, nil, 16, ignoreSafeArea: false)
+        titleLabel.constraintToSuperview(16, 16, nil, 16, ignoreSafeArea: false)
         titleLabel.text = "Alerts"
-        titleLabel.font = UIFont.systemFont(ofSize: 24.0, weight: .bold)
+        titleLabel.font = UIFont.systemFont(ofSize: 24.0, weight: .semibold)
         titleLabel.constraintHeight(to: 50)
         
         rightButton = UIButton(type: .system)

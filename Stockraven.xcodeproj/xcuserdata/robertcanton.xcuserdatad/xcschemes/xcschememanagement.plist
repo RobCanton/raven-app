@@ -7,7 +7,7 @@
 		<key>Stockraven-iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>37</integer>
+			<integer>40</integer>
 		</dict>
 		<key>Stockraven-macOS.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,7 +17,7 @@
 		<key>Stockraven-watchOS WatchKit App (Notification).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>40</integer>
+			<integer>41</integer>
 		</dict>
 		<key>Stockraven-watchOS WatchKit App.xcscheme_^#shared#^_</key>
 		<dict>

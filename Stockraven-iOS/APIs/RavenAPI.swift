@@ -136,7 +136,6 @@ class RavenAPI {
             if let data = data {
                 do {
                     let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                    print("json: \(json)")
                     let resp = try JSONDecoder().decode(WatchlistResponse.self, from: data)
                     stocks = resp.stocks
                     alerts = resp.alerts

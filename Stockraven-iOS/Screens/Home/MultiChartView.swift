@@ -37,6 +37,7 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         self.addSubview(liveChartView)
         liveChartView.constraintToSuperview(0, 0, nil, 0, ignoreSafeArea: false)
         backdrop.heightAnchor.constraint(equalTo: liveChartView.heightAnchor).isActive = true
+        liveChartView.isHidden = true
         
         chartView = ChartView()
         self.addSubview(chartView)
@@ -61,12 +62,25 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.reloadData()
-        collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .left)
+        
     }
     
     func configure(_ stock:Stock) {
         self.stock = stock
         displayTrades(stock.trades, positive: (stock.change ?? 0) >= 0)
+        
+        if StockManager.shared.marketStatus == .closed {
+            selectedTimeframe = .oneDay
+            collectionView.selectItem(at: IndexPath(item: 1, section: 0), animated: false, scrollPosition: .left)
+            chartView.isHidden = false
+            liveChartView.isHidden = true
+            getAggregate(for: .oneDay)
+        } else {
+            selectedTimeframe = .live
+            collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+            chartView.isHidden = true
+            liveChartView.isHidden = false
+        }
     }
     
     private func displayTrades(_ trades:[Stock.Trade], positive:Bool) {
@@ -100,17 +114,22 @@ class MultiChartView:UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         } else {
             liveChartView.isHidden = true
             chartView.isHidden = false
-            chartView.startLoading()
             
-            RavenAPI.getAggregatePreset(for: stock.symbol,
-                                        timeframe: timeframe) { timeframe, data in
-                                            guard let data = data else { return }
-                                            guard self.selectedTimeframe == timeframe else { return }
-                                            print("Data: \(data)")
-                                            self.chartView.displayTicks(data)
-            }
+            getAggregate(for: timeframe)
         }
         
+    }
+    
+    func getAggregate(for timeframe:AggregateTimeframe) {
+        guard let stock = self.stock else { return }
+        chartView.startLoading()
+        RavenAPI.getAggregatePreset(for: stock.symbol,
+                                    timeframe: timeframe) { timeframe, data in
+                                        guard let data = data else { return }
+                                        guard self.selectedTimeframe == timeframe else { return }
+                                        let guide = timeframe == .oneDay ? self.stock?.previousClose?.close : nil
+                                        self.chartView.displayTicks(data, guide: guide)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

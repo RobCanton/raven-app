@@ -18,6 +18,7 @@ class Stock:Codable {
     private(set) var trades:[Trade] // 
     var lastQuote:Quote?
     let previousClose:Close?
+    let intraday:AggregateResponse?
     let order:Int
     
     func addTrade(_ trade:Trade) {

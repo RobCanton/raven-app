@@ -63,6 +63,7 @@ class RootTabBarController:UITabBarController {
         button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         
         view.clipsToBounds = false
+        self.view.alpha = 0.0
     }
     
     required init?(coder: NSCoder) {
@@ -86,7 +87,11 @@ class RootTabBarController:UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.addObserver(self, selector: #selector(showSideMenu), type: .showSideMenu)
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+            self.view.alpha = 1.0
+        }, completion: nil)
     }
+   
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

@@ -13,6 +13,14 @@ import JJFloatingActionButton
 class DetailViewController:UITableViewController {
     var stock:Stock
     
+    let info = [
+        ("Market cap", "12.24B"),
+        ("P/E ratio", "3.56"),
+        ("Dividend", "1.15"),
+        ("Dividend yield","8.39%"),
+        ("52 week high", "63.44"),
+        ("52 week low", "17.51")
+    ]
     init(stock:Stock) {
         self.stock = stock
         super.init(nibName: nil, bundle: nil)
@@ -29,16 +37,19 @@ class DetailViewController:UITableViewController {
         navigationItem.title = stock.symbol
 //        let addButton =
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAdd))
-        navigationController?.navigationBar.tintColor = Theme.current.primary
         tableView.register(DetailHeaderCell.self, forCellReuseIdentifier: "headerCell")
         tableView.register(DetailQuoteCell.self, forCellReuseIdentifier: "quoteCell")
         tableView.register(DetailKeyStatsCell.self, forCellReuseIdentifier: "statsCell")
         tableView.register(StockTitleHeaderCell.self, forCellReuseIdentifier: "titleCell")
-        tableView.register(AlertSummaryCell.self, forCellReuseIdentifier: "alertsCell")
-        tableView.register(NotesSummaryCell.self, forCellReuseIdentifier: "notesCell")
+        tableView.register(AlertRow.self, forCellReuseIdentifier: "alertCell")
+        tableView.register(CommentsSummaryCell.self, forCellReuseIdentifier: "commentsCell")
+        tableView.register(InfoCell.self, forCellReuseIdentifier: "infoCell")
+        tableView.register(SimilarSummaryCell.self, forCellReuseIdentifier: "similarCell")
+        
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         //tableView.separatorStyle = .none
         tableView.reloadData()
         
@@ -73,21 +84,27 @@ class DetailViewController:UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 3
+            return 2
         case 1:
-            return 1
+            return 1 + 3
         case 2:
-            return 1
+            return 1 + 1
+        case 3:
+            return 1 + info.count
+        case 4:
+            return 1 + 1
         default:
             return 0
         }
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
@@ -112,22 +129,58 @@ class DetailViewController:UITableViewController {
         case 1:
             switch indexPath.row {
             case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "alertsCell", for: indexPath) as! AlertSummaryCell
-                cell.configure(stock)
-                cell.delegate = self
-                //cell.delegate = self
-                //cell.titleLabel.text = "Alerts"
+                let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! StockTitleHeaderCell
+                cell.titleLabel.text = "My Alerts"
+                cell.button.setTitle(nil, for: .normal)
+                cell.button.setImage(UIImage(systemName: "plus", withConfiguration: nil), for: .normal)
                 return cell
             default:
-                break
+                let cell = tableView.dequeueReusableCell(withIdentifier: "alertCell", for: indexPath) as! AlertRow
+                if indexPath.row == 3 {
+                    cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+                } else {
+                    cell.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+                }
+                return cell
             }
         case 2:
             switch indexPath.row {
             case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "notesCell", for: indexPath) as! NotesSummaryCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! StockTitleHeaderCell
+                cell.titleLabel.text = "Discussion"
+                cell.button.setTitle("See All", for: .normal)
+                cell.button.setImage(nil, for: .normal)
                 return cell
             default:
-                break
+                let cell = tableView.dequeueReusableCell(withIdentifier: "commentsCell", for: indexPath) as! CommentsSummaryCell
+                return cell
+            }
+        case 3:
+            switch indexPath.row {
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! StockTitleHeaderCell
+                cell.titleLabel.text = "Information"
+                cell.button.setTitle("", for: .normal)
+                cell.button.setImage(nil, for: .normal)
+                return cell
+            default:
+                let i = info[indexPath.row - 1]
+                let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! InfoCell
+                cell.textLabel?.text = i.0
+                cell.detailTextLabel?.text = i.1
+                return cell
+            }
+        case 4:
+            switch indexPath.row {
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "titleCell", for: indexPath) as! StockTitleHeaderCell
+                cell.titleLabel.text = "Related Stocks"
+                cell.button.setTitle(nil, for: .normal)
+                cell.button.setImage(nil, for: .normal)
+                return cell
+            default:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "similarCell", for: indexPath) as! SimilarSummaryCell
+                return cell
             }
         default:
             break
@@ -135,6 +188,12 @@ class DetailViewController:UITableViewController {
         
         
         return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let quoteCell = cell as? DetailQuoteCell {
+            quoteCell.updateQuoteDisplay()
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -154,4 +213,14 @@ extension DetailViewController:AlertsSummaryDelegate {
         let navVC = UINavigationController(rootViewController: alertVC)
         self.present(navVC, animated: true, completion: nil)
     }
+}
+
+extension DetailViewController:NotesSummaryDelegate {
+    func notesSummaryAddNote() {
+        let noteVC = NoteViewController()
+        let navVC = UINavigationController(rootViewController: noteVC)
+        self.present(navVC, animated: true, completion: nil)
+    }
+    
+    
 }

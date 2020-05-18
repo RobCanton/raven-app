@@ -34,13 +34,13 @@ class DetailQuoteCell:UITableViewCell {
         bidTitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         bidTitleLabel.text = "BID"
         contentView.addSubview(bidTitleLabel)
-        bidTitleLabel.constraintToSuperview(8, 16, nil, nil, ignoreSafeArea: false)
+        bidTitleLabel.constraintToSuperview(16, 16, nil, nil, ignoreSafeArea: false)
         
         askTitleLabel = UILabel()
         askTitleLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         askTitleLabel.text = "ASK"
         contentView.addSubview(askTitleLabel)
-        askTitleLabel.constraintToSuperview(8, nil, nil, 16, ignoreSafeArea: false)
+        askTitleLabel.constraintToSuperview(16, nil, nil, 16, ignoreSafeArea: false)
         
         bidAskView.topAnchor.constraint(equalTo: bidTitleLabel.bottomAnchor, constant: 8).isActive = true
         bidAskView.bidSizeLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -56,7 +56,7 @@ class DetailQuoteCell:UITableViewCell {
         NotificationCenter.addObserver(self, selector: #selector(updateQuoteDisplay), type: .stockQuoteUpdated(stock.symbol))
     }
     
-    @objc private func updateQuoteDisplay() {
+    @objc func updateQuoteDisplay() {
         guard let stock = self.stock else { return }
         bidAskView.displayQuote(stock.lastQuote)
     }

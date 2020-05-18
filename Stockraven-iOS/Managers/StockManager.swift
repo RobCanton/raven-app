@@ -153,7 +153,7 @@ class StockManager {
         
     }
     
-    func observe() {
+    func configure(completion: @escaping ()->()) {
         RavenAPI.getWatchlist { _marketStatusStr, _stocks, _alerts in
             if let _marketStatusStr = _marketStatusStr,
                 let _marketStatus = MarketStatus(rawValue: _marketStatusStr) {
@@ -177,6 +177,7 @@ class StockManager {
                 }
             }
             self.connect()
+            completion()
             NotificationCenter.post(.stocksUpdated)
         }
     }

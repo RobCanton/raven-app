@@ -80,8 +80,6 @@ class AlertsStackCell:UICollectionViewCell, UITableViewDelegate, UITableViewData
 }
 
 class AlertRow: UITableViewCell {
-    var typeBubble:UIView!
-    var typeLabel:UILabel!
     var typeIcon:UIImageView!
     var titleLabel:UILabel!
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -98,38 +96,35 @@ class AlertRow: UITableViewCell {
         self.selectionStyle = .none
         //self.constraintHeight(to: 44 + 8)
         //self.backgroundColor = UIColor.label.withAlphaComponent(0.05)
+        self.separatorInset = UIEdgeInsets(top: 0, left: 16 + 32 + 8, bottom: 0, right: 16)
         self.backgroundColor = UIColor.clear
         self.layer.cornerRadius = 8
         self.layer.cornerCurve = .continuous
         self.clipsToBounds = true
-        typeBubble = UIView()
-        addSubview(typeBubble)
-        typeBubble.constraintToSuperview(8, 0, 8, nil, ignoreSafeArea: true)
-        typeBubble.layer.cornerRadius = 8
-        typeBubble.layer.cornerCurve = .continuous
-        typeBubble.clipsToBounds = true
-        typeBubble.backgroundColor = Theme.current.positive
-        typeBubble.widthAnchor.constraint(equalTo: typeBubble.heightAnchor, multiplier: 1.0).isActive = true
         
-        typeLabel = UILabel()
-        typeLabel.text = ""
-        typeLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        typeBubble.addSubview(typeLabel)
-        typeLabel.constraintToCenter(axis: [.x,.y])
+        let iconView = UIView()
+        contentView.addSubview(iconView)
+        iconView.constraintToSuperview(8, 16, 8, nil, ignoreSafeArea: false)
+        iconView.constraintWidth(to: 32)
+        iconView.constraintHeight(to: 32)
         
         typeIcon = UIImageView()
-        typeIcon.image = UIImage(systemName: "arrow.up.right")
-        typeIcon.tintColor = UIColor.white
+        let config = UIImage.SymbolConfiguration(weight: .light)
+        typeIcon.image = UIImage(systemName: "arrow.up.right",
+                                 withConfiguration: config)
+        typeIcon.tintColor = Theme.current.positive //UIColor.white
         typeIcon.contentMode = .scaleAspectFit
-        typeBubble.addSubview(typeIcon)
-        typeIcon.constraintToSuperview(6, 6, 6, 6, ignoreSafeArea: true)
+        iconView.addSubview(typeIcon)
+        typeIcon.constraintToSuperview(6, 0, 6, 6, ignoreSafeArea: true)
+        
     
         
         titleLabel = UILabel()
         titleLabel.text = "Price is over 12.5"
-        addSubview(titleLabel)
+        titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        contentView.addSubview(titleLabel)
         titleLabel.constraintToSuperview(nil, nil, nil, 12, ignoreSafeArea: true)
-        titleLabel.leadingAnchor.constraint(equalTo: typeBubble.trailingAnchor, constant: 12).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: typeIcon.trailingAnchor, constant: 12).isActive = true
         titleLabel.constraintToCenter(axis: [.y])
         
     }

@@ -66,7 +66,8 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
         tableView.dragDelegate = self
         tableView.dropDelegate = self
         tableView.dragInteractionEnabled = true
-        
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        //tableView.separatorStyle = .none
         stocksUpdated()
        
     }

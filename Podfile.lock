@@ -121,6 +121,7 @@ PODS:
     - GTMSessionFetcher/Core (= 1.3.1)
   - JJFloatingActionButton (2.5.0)
   - leveldb-library (1.22)
+  - lottie-ios (3.1.8)
   - MSPeekCollectionViewDelegateImplementation (3.1.1)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -146,6 +147,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - GoogleSignIn
   - JJFloatingActionButton
+  - lottie-ios
   - MSPeekCollectionViewDelegateImplementation
   - Socket.IO-Client-Swift (~> 15.2.0)
   - SwiftMessages
@@ -176,6 +178,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - JJFloatingActionButton
     - leveldb-library
+    - lottie-ios
     - MSPeekCollectionViewDelegateImplementation
     - nanopb
     - PromisesObjC
@@ -209,6 +212,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   MSPeekCollectionViewDelegateImplementation: f86fd6a6ce284723343e8697a013f5294c05e745
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
@@ -217,6 +221,6 @@ SPEC CHECKSUMS:
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
 
-PODFILE CHECKSUM: 03bfdfc5b810ca30c0ac32d644f62f495ca9ea9d
+PODFILE CHECKSUM: 4002563de9eaa8ccff4d59dbdd8b6c84f83a6c89
 
 COCOAPODS: 1.8.4

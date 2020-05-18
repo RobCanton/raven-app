@@ -9,9 +9,15 @@ import Foundation
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
+
+protocol NotesSummaryDelegate:class {
+    func notesSummaryAddNote()
+
+}
+
 class NotesSummaryCell:UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate{
     
-    //weak var delegate:AlertsSummaryDelegate?
+    weak var delegate:NotesSummaryDelegate?
     
     var titleLabel:UILabel!
     var collectionView:UICollectionView!
@@ -34,9 +40,9 @@ class NotesSummaryCell:UITableViewCell, UICollectionViewDataSource, UICollection
         self.selectionStyle = .none
         titleLabel = UILabel()
         contentView.addSubview(titleLabel)
-        titleLabel.constraintToSuperview(0, 16, nil, 16, ignoreSafeArea: false)
+        titleLabel.constraintToSuperview(16, 16, nil, 16, ignoreSafeArea: false)
         titleLabel.text = "Notes"
-        titleLabel.font = UIFont.systemFont(ofSize: 24.0, weight: .bold)
+        titleLabel.font = UIFont.systemFont(ofSize: 24.0, weight: .semibold)
         titleLabel.constraintHeight(to: 50)
         
         rightButton = UIButton(type: .system)
@@ -129,6 +135,6 @@ class NotesSummaryCell:UITableViewCell, UICollectionViewDataSource, UICollection
     }
     
     @objc func handleNewAlertButton() {
-        //self.delegate?.alertsSummaryAddAlert()
+        self.delegate?.notesSummaryAddNote()
     }
 }

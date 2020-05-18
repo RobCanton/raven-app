@@ -18,6 +18,7 @@ target 'Stockraven-iOS' do
   pod 'JJFloatingActionButton'
   pod 'Differ'
   pod 'MSPeekCollectionViewDelegateImplementation'
+  pod 'lottie-ios' 
 end
 
 target 'Stockraven-macOS' do

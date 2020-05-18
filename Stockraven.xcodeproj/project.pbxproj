@@ -11,6 +11,30 @@
 		15F0A78FE4115CA99A35CDB2 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C89AC15B6E4ED41286F7456 /* Pods_Stockraven_watchOS_WatchKit_Extension.framework */; };
 		2B4D53FFFBB1E48FD4D8E055 /* Pods_Stockraven_watchOS_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AEECC94219F0EE6C4FFC11 /* Pods_Stockraven_watchOS_WatchKit_App.framework */; };
 		73CBB5AB380E509B83BF8FE8 /* Pods_Stockraven_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35CA05D8C46AEF4576E3466C /* Pods_Stockraven_iOS.framework */; };
+		B004C7A02471E2F100921BE3 /* pixel_square_1.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C79A2471E2F100921BE3 /* pixel_square_1.json */; };
+		B004C7A12471E2F100921BE3 /* pixel_square_1.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C79A2471E2F100921BE3 /* pixel_square_1.json */; };
+		B004C7A22471E2F100921BE3 /* pixel_square_1.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C79A2471E2F100921BE3 /* pixel_square_1.json */; };
+		B004C7A32471E2F100921BE3 /* pixel_square_1.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C79A2471E2F100921BE3 /* pixel_square_1.json */; };
+		B004C7A42471E2F100921BE3 /* pixel_square_1.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C79A2471E2F100921BE3 /* pixel_square_1.json */; };
+		B004C7A72471E66600921BE3 /* pixel_square_2.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A52471E66400921BE3 /* pixel_square_2.json */; };
+		B004C7A82471E66600921BE3 /* pixel_square_2.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A52471E66400921BE3 /* pixel_square_2.json */; };
+		B004C7A92471E66600921BE3 /* pixel_square_2.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A52471E66400921BE3 /* pixel_square_2.json */; };
+		B004C7AA2471E66600921BE3 /* pixel_square_2.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A52471E66400921BE3 /* pixel_square_2.json */; };
+		B004C7AB2471E66600921BE3 /* pixel_square_2.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A52471E66400921BE3 /* pixel_square_2.json */; };
+		B004C7AC2471E66600921BE3 /* pixel_square_3.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A62471E66500921BE3 /* pixel_square_3.json */; };
+		B004C7AD2471E66600921BE3 /* pixel_square_3.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A62471E66500921BE3 /* pixel_square_3.json */; };
+		B004C7AE2471E66600921BE3 /* pixel_square_3.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A62471E66500921BE3 /* pixel_square_3.json */; };
+		B004C7AF2471E66600921BE3 /* pixel_square_3.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A62471E66500921BE3 /* pixel_square_3.json */; };
+		B004C7B02471E66600921BE3 /* pixel_square_3.json in Resources */ = {isa = PBXBuildFile; fileRef = B004C7A62471E66500921BE3 /* pixel_square_3.json */; };
+		B004C7B22472053600921BE3 /* InteractiveAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7B12472053600921BE3 /* InteractiveAlertViewController.swift */; };
+		B004C7B32472053600921BE3 /* InteractiveAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7B12472053600921BE3 /* InteractiveAlertViewController.swift */; };
+		B004C7B42472053600921BE3 /* InteractiveAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7B12472053600921BE3 /* InteractiveAlertViewController.swift */; };
+		B004C7B6247206C900921BE3 /* InteractiveAlertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7B5247206C900921BE3 /* InteractiveAlertHeaderView.swift */; };
+		B004C7B7247206C900921BE3 /* InteractiveAlertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7B5247206C900921BE3 /* InteractiveAlertHeaderView.swift */; };
+		B004C7B8247206C900921BE3 /* InteractiveAlertHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7B5247206C900921BE3 /* InteractiveAlertHeaderView.swift */; };
+		B004C7BB24723AB400921BE3 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7BA24723AB400921BE3 /* NoteViewController.swift */; };
+		B004C7BC24723AB400921BE3 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7BA24723AB400921BE3 /* NoteViewController.swift */; };
+		B004C7BD24723AB400921BE3 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004C7BA24723AB400921BE3 /* NoteViewController.swift */; };
 		B00B358B246C65A400FBB111 /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358A246C65A400FBB111 /* BinarySearch.swift */; };
 		B00B358D246CBF6000FBB111 /* AlertsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */; };
 		B00B358F246CC0B600FBB111 /* StockTitleHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00B358E246CC0B600FBB111 /* StockTitleHeaderCell.swift */; };
@@ -54,6 +78,7 @@
 		B015F14B245E272800E8B8B7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B015F14A245E272800E8B8B7 /* HomeViewController.swift */; };
 		B04B6DE1245E35CB0011238F /* StockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B6DE0245E35CB0011238F /* StockManager.swift */; };
 		B04F7BA32470DB8D00C4D73F /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F7BA22470DB8D00C4D73F /* RootContainerViewController.swift */; };
+		B04F7BA52471E02900C4D73F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04F7BA42471E02900C4D73F /* LoadingViewController.swift */; };
 		B05511DE2461B41D006A52FD /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511DD2461B41D006A52FD /* AlertNotification.swift */; };
 		B05511E02461B4AE006A52FD /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511DF2461B4AE006A52FD /* NotificationManager.swift */; };
 		B05511E32461B762006A52FD /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05511E22461B762006A52FD /* NotificationsViewController.swift */; };
@@ -100,6 +125,9 @@
 		B0D89FFF246220BF008145F1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D89FFE246220BF008145F1 /* UIImageView+Extensions.swift */; };
 		B0D8A00124622482008145F1 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D8A00024622482008145F1 /* News.swift */; };
 		B0D8A003246225C0008145F1 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D8A002246225C0008145F1 /* NewsCell.swift */; };
+		B0DA07A424724D3700F56F1A /* CommentsSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A324724D3700F56F1A /* CommentsSummaryCell.swift */; };
+		B0DA07A6247258D000F56F1A /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A5247258D000F56F1A /* InfoCell.swift */; };
+		B0DA07A824725E7800F56F1A /* SimilarSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DA07A724725E7800F56F1A /* SimilarSummaryCell.swift */; };
 		DAD59BCED675BE30B44A4B05 /* Pods_Stockraven_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551B43DF20EE8A1AB7090B54 /* Pods_Stockraven_watchOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +183,12 @@
 		8D3AF268972DEF1E27FB73BE /* Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit Extension/Pods-Stockraven-watchOS WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		9245530C5F9C2C4C18489157 /* Pods-Stockraven-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-macOS.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-macOS/Pods-Stockraven-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A89604354857857E3F031B07 /* Pods-Stockraven-watchOS WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit App/Pods-Stockraven-watchOS WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		B004C79A2471E2F100921BE3 /* pixel_square_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pixel_square_1.json; sourceTree = "<group>"; };
+		B004C7A52471E66400921BE3 /* pixel_square_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pixel_square_2.json; sourceTree = "<group>"; };
+		B004C7A62471E66500921BE3 /* pixel_square_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pixel_square_3.json; sourceTree = "<group>"; };
+		B004C7B12472053600921BE3 /* InteractiveAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAlertViewController.swift; sourceTree = "<group>"; };
+		B004C7B5247206C900921BE3 /* InteractiveAlertHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAlertHeaderView.swift; sourceTree = "<group>"; };
+		B004C7BA24723AB400921BE3 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		B00B358A246C65A400FBB111 /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsSummaryCell.swift; sourceTree = "<group>"; };
 		B00B358E246CC0B600FBB111 /* StockTitleHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTitleHeaderCell.swift; sourceTree = "<group>"; };
@@ -207,6 +241,7 @@
 		B015F14A245E272800E8B8B7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B04B6DE0245E35CB0011238F /* StockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockManager.swift; sourceTree = "<group>"; };
 		B04F7BA22470DB8D00C4D73F /* RootContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
+		B04F7BA42471E02900C4D73F /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		B05511DD2461B41D006A52FD /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		B05511DF2461B4AE006A52FD /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		B05511E22461B762006A52FD /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +279,9 @@
 		B0D89FFE246220BF008145F1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		B0D8A00024622482008145F1 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		B0D8A002246225C0008145F1 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		B0DA07A324724D3700F56F1A /* CommentsSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsSummaryCell.swift; sourceTree = "<group>"; };
+		B0DA07A5247258D000F56F1A /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		B0DA07A724725E7800F56F1A /* SimilarSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarSummaryCell.swift; sourceTree = "<group>"; };
 		C9098FED67C41D3127DB1EA1 /* Pods-Stockraven-watchOS WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS WatchKit App/Pods-Stockraven-watchOS WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		CF6472224098200F88F1C47B /* Pods-Stockraven-watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockraven-watchOS.release.xcconfig"; path = "Target Support Files/Pods-Stockraven-watchOS/Pods-Stockraven-watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		D6BB29844D2E5E5A97E42E8B /* Pods_Stockraven_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockraven_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +352,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B004C7B924723AA700921BE3 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				B004C7BA24723AB400921BE3 /* NoteViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		B00B3589246C659400FBB111 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,18 +372,24 @@
 			isa = PBXGroup;
 			children = (
 				B0BCA41D246D7AA500A91753 /* DetailViewController.swift */,
+				B0DA07A5247258D000F56F1A /* InfoCell.swift */,
 				B0BCA41F246D7AFC00A91753 /* DetailHeaderCell.swift */,
 				B0BCA427246DA9EB00A91753 /* DetailQuoteCell.swift */,
 				B0BCA425246D9FDF00A91753 /* DetailKeyStatsCell.swift */,
 				B00B358C246CBF6000FBB111 /* AlertsSummaryCell.swift */,
 				B0BCA429246E21A600A91753 /* AlertsStackCell.swift */,
 				B0BCA42B246E5D1C00A91753 /* NotesSummaryCell.swift */,
+				B0DA07A324724D3700F56F1A /* CommentsSummaryCell.swift */,
+				B0DA07A724725E7800F56F1A /* SimilarSummaryCell.swift */,
 				B07EA5CD2464AABA006A491E /* StockDetailPageViewController.swift */,
 				B01078B1246071C0007F8BA3 /* StockDetailViewController.swift */,
 				B05D284A246B28960097B49A /* StockFundamentalsCell.swift */,
 				B00B358E246CC0B600FBB111 /* StockTitleHeaderCell.swift */,
 				B06A84D624637DA7009C32EC /* StockDetailViewController+Extensions.swift */,
 				B06A84D22462DCF1009C32EC /* StockDetailTabHeader.swift */,
+				B004C7B12472053600921BE3 /* InteractiveAlertViewController.swift */,
+				B004C7B5247206C900921BE3 /* InteractiveAlertHeaderView.swift */,
+				B004C7B924723AA700921BE3 /* Notes */,
 				B01078B32460E9B4007F8BA3 /* Alerts */,
 				B0D89FF924620D90008145F1 /* Social */,
 			);
@@ -347,9 +399,9 @@
 		B01078B32460E9B4007F8BA3 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				B01078BA2460E9BF007F8BA3 /* AlertViewController.swift */,
 				B01078B52460E9BD007F8BA3 /* AlertSwitchCell.swift */,
 				B01078B82460E9BE007F8BA3 /* AlertTextFieldCell.swift */,
-				B01078BA2460E9BF007F8BA3 /* AlertViewController.swift */,
 				B01078B72460E9BE007F8BA3 /* DeleteCell.swift */,
 				B01078B42460E9BD007F8BA3 /* ResetCell.swift */,
 				B01078B62460E9BD007F8BA3 /* ResetSelectViewController.swift */,
@@ -399,6 +451,9 @@
 				B015F0E6245E1F6600E8B8B7 /* Assets.xcassets */,
 				B0BCA42D246F019100A91753 /* Resources */,
 				B07B3D3B245E656300BEB314 /* Colors.xcassets */,
+				B004C79A2471E2F100921BE3 /* pixel_square_1.json */,
+				B004C7A52471E66400921BE3 /* pixel_square_2.json */,
+				B004C7A62471E66500921BE3 /* pixel_square_3.json */,
 				B015F0EB245E1F6600E8B8B7 /* Info.plist */,
 				B015F131245E229300E8B8B7 /* GoogleService-Info.plist */,
 			);
@@ -471,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				B015F136245E250400E8B8B7 /* SignInViewController.swift */,
+				B04F7BA42471E02900C4D73F /* LoadingViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -728,7 +784,10 @@
 				B07B3D3C245E656300BEB314 /* Colors.xcassets in Resources */,
 				B015F0EA245E1F6600E8B8B7 /* LaunchScreen.storyboard in Resources */,
 				B015F0E7245E1F6600E8B8B7 /* Assets.xcassets in Resources */,
+				B004C7A02471E2F100921BE3 /* pixel_square_1.json in Resources */,
 				B015F0E5245E1F6500E8B8B7 /* Main.storyboard in Resources */,
+				B004C7AC2471E66600921BE3 /* pixel_square_3.json in Resources */,
+				B004C7A72471E66600921BE3 /* pixel_square_2.json in Resources */,
 				B015F132245E229300E8B8B7 /* GoogleService-Info.plist in Resources */,
 				B0BCA42F246F01DC00A91753 /* alert.caf in Resources */,
 			);
@@ -738,6 +797,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B004C7A82471E66600921BE3 /* pixel_square_2.json in Resources */,
+				B004C7A12471E2F100921BE3 /* pixel_square_1.json in Resources */,
+				B004C7AD2471E66600921BE3 /* pixel_square_3.json in Resources */,
 				B015F0FA245E1F7F00E8B8B7 /* Assets.xcassets in Resources */,
 				B015F0FD245E1F7F00E8B8B7 /* Main.storyboard in Resources */,
 				B0BCA430246F01DC00A91753 /* alert.caf in Resources */,
@@ -748,6 +810,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B004C7A22471E2F100921BE3 /* pixel_square_1.json in Resources */,
+				B004C7A92471E66600921BE3 /* pixel_square_2.json in Resources */,
+				B004C7AE2471E66600921BE3 /* pixel_square_3.json in Resources */,
 				B0BCA431246F01DC00A91753 /* alert.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +821,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B004C7AA2471E66600921BE3 /* pixel_square_2.json in Resources */,
+				B004C7A32471E2F100921BE3 /* pixel_square_1.json in Resources */,
+				B004C7AF2471E66600921BE3 /* pixel_square_3.json in Resources */,
 				B015F111245E1F9D00E8B8B7 /* Assets.xcassets in Resources */,
 				B015F10F245E1F9C00E8B8B7 /* Interface.storyboard in Resources */,
 				B0BCA432246F01DC00A91753 /* alert.caf in Resources */,
@@ -766,6 +834,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B004C7B02471E66600921BE3 /* pixel_square_3.json in Resources */,
+				B004C7A42471E2F100921BE3 /* pixel_square_1.json in Resources */,
+				B004C7AB2471E66600921BE3 /* pixel_square_2.json in Resources */,
 				B015F123245E1F9D00E8B8B7 /* Assets.xcassets in Resources */,
 				B0BCA433246F01DC00A91753 /* alert.caf in Resources */,
 			);
@@ -933,8 +1004,11 @@
 				B05D284B246B28960097B49A /* StockFundamentalsCell.swift in Sources */,
 				B015F148245E25F500E8B8B7 /* RootTabBarController.swift in Sources */,
 				B07B3D3E245E658B00BEB314 /* RavenAPI.swift in Sources */,
+				B004C7B22472053600921BE3 /* InteractiveAlertViewController.swift in Sources */,
+				B04F7BA52471E02900C4D73F /* LoadingViewController.swift in Sources */,
 				B0BCA42C246E5D1C00A91753 /* NotesSummaryCell.swift in Sources */,
 				B01078BC2460E9BF007F8BA3 /* ResetCell.swift in Sources */,
+				B0DA07A424724D3700F56F1A /* CommentsSummaryCell.swift in Sources */,
 				B04F7BA32470DB8D00C4D73F /* RootContainerViewController.swift in Sources */,
 				B0BCA428246DA9EB00A91753 /* DetailQuoteCell.swift in Sources */,
 				B0BCA42A246E21A600A91753 /* AlertsStackCell.swift in Sources */,
@@ -944,6 +1018,7 @@
 				B06A84D724637DA7009C32EC /* StockDetailViewController+Extensions.swift in Sources */,
 				B0BCA439246F18A500A91753 /* Aggregate.swift in Sources */,
 				B015F142245E259300E8B8B7 /* Date+Extensions.swift in Sources */,
+				B0DA07A824725E7800F56F1A /* SimilarSummaryCell.swift in Sources */,
 				B0BCA422246D90AD00A91753 /* LiveChartView.swift in Sources */,
 				B01078BE2460E9BF007F8BA3 /* ResetSelectViewController.swift in Sources */,
 				B0BCA43D246F1F0400A91753 /* ChartView.swift in Sources */,
@@ -954,6 +1029,7 @@
 				B01078BF2460E9BF007F8BA3 /* DeleteCell.swift in Sources */,
 				B0D8A003246225C0008145F1 /* NewsCell.swift in Sources */,
 				B015F13E245E253C00E8B8B7 /* UIFont+Extensions.swift in Sources */,
+				B004C7B6247206C900921BE3 /* InteractiveAlertHeaderView.swift in Sources */,
 				B015F144245E259B00E8B8B7 /* Double+Extensions.swift in Sources */,
 				B01078C22460E9BF007F8BA3 /* AlertViewController.swift in Sources */,
 				B07B3D36245E63E500BEB314 /* Alert.swift in Sources */,
@@ -982,9 +1058,11 @@
 				B015F140245E255100E8B8B7 /* UIView+Extensions.swift in Sources */,
 				B015F14B245E272800E8B8B7 /* HomeViewController.swift in Sources */,
 				B00B358B246C65A400FBB111 /* BinarySearch.swift in Sources */,
+				B004C7BB24723AB400921BE3 /* NoteViewController.swift in Sources */,
 				B015F0E0245E1F6500E8B8B7 /* SceneDelegate.swift in Sources */,
 				B0BCA426246D9FDF00A91753 /* DetailKeyStatsCell.swift in Sources */,
 				B01078B2246071C0007F8BA3 /* StockDetailViewController.swift in Sources */,
+				B0DA07A6247258D000F56F1A /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -994,6 +1072,9 @@
 			files = (
 				B0BCA43A246F18A500A91753 /* Aggregate.swift in Sources */,
 				B0BCA436246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */,
+				B004C7B32472053600921BE3 /* InteractiveAlertViewController.swift in Sources */,
+				B004C7B7247206C900921BE3 /* InteractiveAlertHeaderView.swift in Sources */,
+				B004C7BC24723AB400921BE3 /* NoteViewController.swift in Sources */,
 				B015F0F8245E1F7E00E8B8B7 /* ViewController.swift in Sources */,
 				B0BCA43E246F1F0400A91753 /* ChartView.swift in Sources */,
 				B015F0F6245E1F7E00E8B8B7 /* AppDelegate.swift in Sources */,
@@ -1006,10 +1087,13 @@
 			files = (
 				B015F121245E1F9D00E8B8B7 /* NotificationController.swift in Sources */,
 				B0BCA43B246F18A500A91753 /* Aggregate.swift in Sources */,
+				B004C7B8247206C900921BE3 /* InteractiveAlertHeaderView.swift in Sources */,
 				B015F11F245E1F9D00E8B8B7 /* ExtensionDelegate.swift in Sources */,
 				B015F11D245E1F9D00E8B8B7 /* InterfaceController.swift in Sources */,
+				B004C7BD24723AB400921BE3 /* NoteViewController.swift in Sources */,
 				B0BCA437246F129800A91753 /* RavenAPI+Aggregates.swift in Sources */,
 				B0BCA43F246F1F0400A91753 /* ChartView.swift in Sources */,
+				B004C7B42472053600921BE3 /* InteractiveAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

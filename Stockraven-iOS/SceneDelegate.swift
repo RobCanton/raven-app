@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        self.openLoadingScreen()
         fetchRequirements {
             self.listenToAuth()
         }
@@ -102,6 +103,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.makeKeyAndVisible()
     }
     
+    func openLoadingScreen() {
+        let controller = LoadingViewController()
+        self.window?.rootViewController = controller
+        self.window?.makeKeyAndVisible()
+    }
+    
     func openHomeScreen() {
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -110,11 +117,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             completionHandler: {_, _ in })
         
         UIApplication.shared.registerForRemoteNotifications()
-        
-        //let controller = UIHostingController(rootView: HomeListView())
-        let controller = RootTabBarController()
-        self.window?.rootViewController = controller
-        self.window?.makeKeyAndVisible()
         
         InstanceID.instanceID().instanceID { (result, error) in
             if let error = error {
@@ -125,14 +127,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         
+        guard let loadingVC = self.window?.rootViewController as? LoadingViewController else { return }
+        loadingVC.fadeout {
+            let controller = RootTabBarController()
+            self.window?.rootViewController = controller
+            self.window?.makeKeyAndVisible()
+        }
+        
+        
     }
     
     func fetchUserData(completion: @escaping (()->())) {
         
         RavenAPI.registerPushToken()
-        StockManager.shared.observe()
+        
         NotificationManager.shared.start()
-        completion()
+        StockManager.shared.configure {
+            completion()
+        }
+        
         
     }
 
